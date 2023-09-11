@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "437828003582",
+    "project_id": "ta-kayuringinsehat",
+    "storage_bucket": "ta-kayuringinsehat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437828003582:android:8b460a55612958ac9627af",
+        "android_client_info": {
+          "package_name": "com.example.kayuringinsehat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437828003582-0sta7bs7ntl8em8i9bb63ln2pjblplco.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kayuringinsehat",
+            "certificate_hash": "3b6e747b9ba95a4c5b3d0f0c0d747ed260b886ba"
+          }
+        },
+        {
+          "client_id": "437828003582-cvgmng84bgc32v4ehbeioqa0muinvlpn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC300v2Z-54QtVqI1zNtSj98RsO6b3qBbQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437828003582-cvgmng84bgc32v4ehbeioqa0muinvlpn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
