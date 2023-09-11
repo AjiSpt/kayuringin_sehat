@@ -3,6 +3,7 @@
     <style name="Base.Theme.Kayuringinsehat" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
          <item name="colorPrimary">@color/blue</item>
+        <item name="colorSecondary">@color/white</item>
     </style>
 
     <style name="Theme.Kayuringinsehat" parent="Base.Theme.Kayuringinsehat" />

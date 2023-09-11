@@ -393,13 +393,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/ba_menuUtama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fabCradleMargin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@color/white">
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_nav"
-            android:layout_width="match_parent"
+            android:id="@+id/bottom_Nav"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="20dp"
+            android:background="@color/blue"
             app:menu="@menu/button_menu"/>
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
