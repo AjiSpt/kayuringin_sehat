@@ -1,3 +1,41 @@
 <resources>
-    <string name="app_name">kayuringinsehat</string>
+    <string name="app_name">Kayuringin Sehat</string>
+    <string name="copyright">©kayuringinsehat</string>
+    <string name="masuk">Masuk</string>
+    <string name="keluar">Keluar</string>
+    <string name="daftar">Daftar</string>
+    <string name="sudahpunyakun">Sudah Punya Akun?</string>
+    <string name="belumpunyakun">Belum Punya Akun?</string>
+    <string name="kirim">Kirim</string>
+    <string name="warning_masukkan_email">Masukkan Alamat Email atau Nomor Telepon untuk menerima kata sandi baru melalui kotak masuk Email atau SMS Anda.</string>
+    <string name="atur_sandi">Atur Ulang Kata Sandi</string>
+    <string name="kata_sandi_baru_dikirim">Kata Sandi baru dikirim ke Email/SMS Anda. Silakan Periksa Kotak Masuk!</string>
+    <string name="masuk_user">Telepon/Email/NIK/No.BPJS</string>
+    <string name="kata_sandi">Kata Sandi</string>
+    <string name="ulang_kata_sandi">Ulangi Kata Sandi</string>
+    <string name="nik">NIK / Nomor KTP</string>
+    <string name="telepon">Telepon/Email</string>
+    <string name="bpjs">No.BPJS</string>
+    \
+    <string name="nomor_bpjs">nomor BPJS</string>
+    <string name="last_check">last check: dd/mm/yyyy</string>
+    <string name="tensi">TENSI DARAH</string>
+    <string name="tensi_darah">000/00</string>
+    <string name="riwayat">RIWAYAT SAKIT</string>
+    <string name="riwayat_sakit">NOT NULL</string>
+    <string name="gol_darah">GOL. DARAH</string>
+    <string name="golongan_darah">NOT NULL</string>
+
+    <string name="gizi">Kalkulator Gizi Anak</string>
+    <string name="bmi">Kalkulator Indeks Masa Tubuh</string>
+    <string name="mens">Kalkulator Menstruasi</string>
+    <string name="web_bpjs">Website Official BPJS</string>
+
+    <string name="menu_layanan">LAYANAN</string>
+    <string name="menu_faskes">DAFTAR FASKES</string>
+    <string name="menu_darurat">DARURAT</string>
+    <string name="menu_tanya">TANYA</string>
+    <string name="menu_akun">ATUR AKUN</string>
+
+    
 </resources>

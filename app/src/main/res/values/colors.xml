@@ -4,9 +4,12 @@
     <color name="white">#FFFFFF</color>
 
     // new Color
-    <color name="blue">#022B4B</color>
-    <color name="gray">#D2D2D2</color>
+    <color name="biruMENU">#022B4B</color>
+    <color name="abuCARDVIEW">#D2D2D2</color>
     <color name="text_shadow">#7F000000</color>
-    <color name="red">#AD1F48</color>
-    <color name="gray2">#838383</color>
+    <color name="merahGOLDAR">#AD1F48</color>
+    <color name="abuCOPYRIGHT">#838383</color>
+    <color name="hijauBMI">#83C993</color>
+    <color name="merahMENS">#F8154A</color>
+    <color name="biruGIZI">#5E94E5</color>
 </resources>
