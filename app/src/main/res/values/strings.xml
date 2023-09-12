@@ -16,7 +16,7 @@
     <string name="nik">NIK / Nomor KTP</string>
     <string name="telepon">Telepon/Email</string>
     <string name="bpjs">No.BPJS</string>
-    \
+
     <string name="nomor_bpjs">nomor BPJS</string>
     <string name="last_check">last check: dd/mm/yyyy</string>
     <string name="tensi">TENSI DARAH</string>
@@ -31,11 +31,47 @@
     <string name="mens">Kalkulator Menstruasi</string>
     <string name="web_bpjs">Website Official BPJS</string>
 
+    <string name="tahukah_kamu">Tahukah Kamu?</string>
+    
+    <string name="hari_pertama">Hari Pertama Haid</string>
+    <string name="lama_siklus">Lama Siklus Haid (Rata-Rata)</string>
+    <string name="berat_badan">Berat Badan</string>
+    <string name="tinggi_badan">Tinggi Badan</string>
+
+
     <string name="menu_layanan">LAYANAN</string>
     <string name="menu_faskes">DAFTAR FASKES</string>
     <string name="menu_darurat">DARURAT</string>
     <string name="menu_tanya">TANYA</string>
     <string name="menu_akun">ATUR AKUN</string>
+    
+    <string name="hitung">Hitung</string>
+    <string name="rumah_sakit">RUMAH SAKIT</string>
+    <string name="puskesmas">PUSKESMAS</string>
+    <string name="klinik">KLINIK</string>
+    <string name="faskes_tersedia">Faskes Tersedia</string>
+    <string name="daftar_poli">Daftar Poli</string>
+    <string name="poli_umum">POLI UMUM</string>
+    <string name="poli_gigi">POLI GIGI</string>
+    <string name="nomor_antrean">Nomor Antrean</string>
+    
+    <string name="nama_faskes">Nama Faskes</string>
+    <string name="poli">Poli</string>
+    <string name="jam_operasi">Jam Operasional</string>
+    <string name="nomor_antrean_anda">Nomor Antrean Anda</string>
+
+    <string name="tanya_faskes">Tanya Faskes</string>
+
+    <string name="tentang_app">Tentang Aplikasi</string>
+    <string name="simpan">Simpan</string>
+
+    <string name="kecelakaaan">KECELAKAAN</string>
+    <string name="melahirkan">MELAHIRKAN</string>
+    <string name="ambulan">AMBULAN SEGERA HADIR</string>
+
+    <string name="teks_bmi"><b>Indeks Massa Tubuh</b> adalah ukuran yang digunakan untuk mengetahui status gizi seseorang yang didapatkan dari <b>perbandingan berat dan tinggi badan</b>. Perhitungan IMT adalah dengan membagi berat badan (dalam kilogram) dengan tinggi badan (dalam meter kuadrat).</string>
+
+    
 
     
 </resources>

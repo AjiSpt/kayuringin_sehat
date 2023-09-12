@@ -8,6 +8,11 @@ plugins {
 }
 
 android {
+
+    buildFeatures {
+        viewBinding = true
+    }
+
     namespace 'com.example.kayuringinsehat'
     compileSdk 33
 
