@@ -32,7 +32,7 @@
     <string name="web_bpjs">Website Official BPJS</string>
 
     <string name="tahukah_kamu">Tahukah Kamu?</string>
-    
+
     <string name="hari_pertama">Hari Pertama Haid</string>
     <string name="lama_siklus">Lama Siklus Haid (Rata-Rata)</string>
     <string name="berat_badan">Berat Badan</string>
@@ -44,7 +44,7 @@
     <string name="menu_darurat">DARURAT</string>
     <string name="menu_tanya">TANYA</string>
     <string name="menu_akun">ATUR AKUN</string>
-    
+
     <string name="hitung">Hitung</string>
     <string name="rumah_sakit">RUMAH SAKIT</string>
     <string name="puskesmas">PUSKESMAS</string>
@@ -54,7 +54,7 @@
     <string name="poli_umum">POLI UMUM</string>
     <string name="poli_gigi">POLI GIGI</string>
     <string name="nomor_antrean">Nomor Antrean</string>
-    
+
     <string name="nama_faskes">Nama Faskes</string>
     <string name="poli">Poli</string>
     <string name="jam_operasi">Jam Operasional</string>
@@ -71,7 +71,5 @@
 
     <string name="teks_bmi"><b>Indeks Massa Tubuh</b> adalah ukuran yang digunakan untuk mengetahui status gizi seseorang yang didapatkan dari <b>perbandingan berat dan tinggi badan</b>. Perhitungan IMT adalah dengan membagi berat badan (dalam kilogram) dengan tinggi badan (dalam meter kuadrat).</string>
 
-    
 
-    
 </resources>

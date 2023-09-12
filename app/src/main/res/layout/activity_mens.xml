@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BmiActivity">
+    tools:context=".MensActivity">
 
     <LinearLayout
-        android:id="@+id/lin_1_bmi"
+        android:id="@+id/lin_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -15,12 +15,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv_profile_bmi"
+            android:id="@+id/cv_profile"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/hijauBMI"
+            android:backgroundTint="@color/merahMENS"
             android:orientation="vertical"
             app:cardCornerRadius="30dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
                 android:layout_gravity="center">
 
                 <ImageView
-                    android:id="@+id/iv_profile_bmi"
+                    android:id="@+id/iv_profile"
                     android:layout_width="34dp"
                     android:layout_height="34dp"
                     android:layout_gravity="center"
@@ -47,7 +47,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/hijauBMI"
+            android:backgroundTint="@color/merahMENS"
             android:orientation="vertical"
             app:cardCornerRadius="30dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -68,7 +68,7 @@
             android:layout_width="55dp"
             android:layout_height="50dp"
             android:layout_margin="20dp"
-            android:backgroundTint="@color/hijauBMI"
+            android:backgroundTint="@color/merahMENS"
             android:drawable="@drawable/kembali"
             app:cardCornerRadius="30dp">
 
@@ -84,18 +84,20 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/lin_2_bmi"
+        android:id="@+id/lin_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/lin_1_bmi"
+        app:layout_constraintTop_toBottomOf="@+id/lin_1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/bmi" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/mens"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="20dp"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -108,7 +110,7 @@
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:id="@+id/lin_3_bmi"
+                    android:id="@+id/lin_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -142,10 +144,10 @@
                     android:gravity="center"
                     android:paddingTop="8dp"
                     android:text="@string/teks_bmi"
-                    android:textColor="@color/hijauBMI"
+                    android:textColor="@color/merahMENS"
                     android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/lin_3_bmi" />
+                    app:layout_constraintTop_toBottomOf="@+id/lin_3" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -157,7 +159,7 @@
         android:id="@+id/lin_4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/lin_2_bmi"
+        app:layout_constraintTop_toBottomOf="@+id/lin_2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:orientation="vertical"
@@ -174,7 +176,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/berat_badan"
+                android:hint="@string/hari_pertama"
                 android:layout_weight="2"
                 android:layout_marginEnd="5dp"
                 app:boxCornerRadiusBottomEnd="15dp"
@@ -182,32 +184,14 @@
                 app:boxCornerRadiusBottomStart="15dp"
                 app:boxCornerRadiusTopEnd="15dp">
 
+
+
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/berat_badan"
+                    android:id="@+id/hari_pertama"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
-            <androidx.cardview.widget.CardView
-                android:layout_margin="5dp"
-                android:layout_width="100dp"
-                android:layout_height="55dp"
-                android:layout_weight="1"
-                app:cardBackgroundColor="@color/hijauBMI"
-                app:cardCornerRadius="15dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="kg"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/plusjakarta"
-                    android:textSize="25sp"
-                    android:layout_gravity="center"/>
-
-            </androidx.cardview.widget.CardView>
 
 
         </LinearLayout>
@@ -221,7 +205,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/tinggi_badan"
+                android:hint="@string/lama_siklus"
                 android:layout_weight="2"
                 android:layout_marginEnd="5dp"
                 app:boxCornerRadiusBottomEnd="15dp"
@@ -236,26 +220,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <androidx.cardview.widget.CardView
-                android:layout_margin="5dp"
-                android:layout_width="100dp"
-                android:layout_height="55dp"
-                android:layout_weight="1"
-                app:cardBackgroundColor="@color/hijauBMI"
-                app:cardCornerRadius="15dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="cm"
-                    android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/plusjakarta"
-                    android:textSize="25sp"
-                    android:layout_gravity="center"/>
-
-            </androidx.cardview.widget.CardView>
-
         </LinearLayout>
 
     </LinearLayout>
@@ -264,7 +228,7 @@
         android:id="@+id/btn_hitung_bmi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/hijauBMI"
+        android:backgroundTint="@color/merahMENS"
         android:text="@string/hitung"
         android:textSize="25sp"
         android:layout_margin="20dp"
@@ -296,7 +260,9 @@
             android:layout_weight="2"
             android:layout_gravity="center"/>
 
+
     </LinearLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
