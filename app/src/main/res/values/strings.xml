@@ -70,6 +70,7 @@
     <string name="ambulan">AMBULAN SEGERA HADIR</string>
 
     <string name="teks_bmi"><b>Indeks Massa Tubuh</b> adalah ukuran yang digunakan untuk mengetahui status gizi seseorang yang didapatkan dari <b>perbandingan berat dan tinggi badan</b>. Perhitungan IMT adalah dengan membagi berat badan (dalam kilogram) dengan tinggi badan (dalam meter kuadrat).</string>
-
+    <string name="teks_mens"><b>Kalkulator Menstruasi</b> adalah perhitungan untuk menentukan kapan kemungkinan terjadinya ovulasi. Mengetahui masa subur penting bagi perempuan dan pasangan karena dapat meningkatkan peluang pembuahan jika dilakukan dengan efektif.</string>
+    <string name="teks_gizi"><b>Kalkulator Gizi Anak</b> adalah perhitungan  data tentang ukuran, proporsi, dan komposisi tubuh sebagai rujukan untuk menilai status gizi dan tren pertumbuhan anak berdasarkan ketentuan pada Peraturan Menteri Kesehatan Republik Indonesia Nomor 2 Tahun 2020 Tentang Standar Antropometri Anak.</string>
 
 </resources>

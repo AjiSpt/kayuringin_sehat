@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MensActivity">
+    tools:context=".GiziActivity">
 
     <LinearLayout
-        android:id="@+id/lin_1_mens"
+        android:id="@+id/lin_1_gizi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -15,12 +15,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv_profile_mens"
+            android:id="@+id/cv_profile_gizi"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/merahMENS"
+            android:backgroundTint="@color/biruGIZI"
             android:orientation="vertical"
             app:cardCornerRadius="30dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
                 android:layout_gravity="center">
 
                 <ImageView
-                    android:id="@+id/iv_profile_mens"
+                    android:id="@+id/iv_profile_gizi"
                     android:layout_width="34dp"
                     android:layout_height="34dp"
                     android:layout_gravity="center"
@@ -42,12 +42,12 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cv_judul_mens"
+            android:id="@+id/cv_judul_gizi"
             android:layout_width="230dp"
             android:layout_height="50dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/merahMENS"
+            android:backgroundTint="@color/biruGIZI"
             android:orientation="vertical"
             app:cardCornerRadius="30dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/plusjakarta"
-                android:text="@string/mens"
+                android:text="@string/gizi"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
@@ -68,7 +68,7 @@
             android:layout_width="55dp"
             android:layout_height="50dp"
             android:layout_margin="20dp"
-            android:backgroundTint="@color/merahMENS"
+            android:backgroundTint="@color/biruGIZI"
             android:drawable="@drawable/kembali"
             app:cardCornerRadius="30dp">
 
@@ -84,20 +84,20 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/lin_2_mens"
+        android:id="@+id/lin_2_gizi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/lin_1_mens"
+        app:layout_constraintTop_toBottomOf="@+id/lin_1_gizi"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
-            android:layout_width="100dp"
+            android:layout_width="70dp"
             android:layout_height="100dp"
-            android:src="@drawable/mens"
+            android:src="@drawable/gizi"
             android:layout_gravity="center_vertical"
-            android:layout_margin="20dp"/>
+            android:layout_margin="15dp"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -110,7 +110,7 @@
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:id="@+id/lin_3_mens"
+                    android:id="@+id/lin_3_gizi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
@@ -143,123 +143,17 @@
                     android:fontFamily="@font/plusjakarta"
                     android:gravity="center"
                     android:paddingTop="8dp"
-                    android:text="@string/teks_mens"
-                    android:textColor="@color/merahMENS"
+                    android:text="@string/teks_gizi"
+                    android:textColor="@color/biruGIZI"
                     android:textSize="12sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/lin_3_mens" />
+                    app:layout_constraintTop_toBottomOf="@+id/lin_3_gizi" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/lin_4_mens"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/lin_2_mens"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:orientation="vertical"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp">
-
-        <LinearLayout
-            android:id="@+id/lin_5_mens"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/hari_pertama"
-                android:layout_weight="2"
-                android:layout_marginEnd="5dp"
-                app:boxCornerRadiusBottomEnd="15dp"
-                app:boxCornerRadiusTopStart="15dp"
-                app:boxCornerRadiusBottomStart="15dp"
-                app:boxCornerRadiusTopEnd="15dp">
-
-
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/hari_pertama"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/lin_6_mens"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/lama_siklus"
-                android:layout_weight="2"
-                android:layout_marginEnd="5dp"
-                app:boxCornerRadiusBottomEnd="15dp"
-                app:boxCornerRadiusTopStart="15dp"
-                app:boxCornerRadiusBottomStart="15dp"
-                app:boxCornerRadiusTopEnd="15dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/siklus_mens"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_hitung_mens"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/merahMENS"
-        android:text="@string/hitung"
-        android:textSize="25sp"
-        android:layout_margin="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lin_4_mens"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/btn_hitung_mens"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="20dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:id="@+id/iv_status_obesitas"
-            android:src="@drawable/obesity"
-
-            android:layout_width="100dp"
-            android:layout_height="200dp"
-            android:layout_weight="2"
-            android:layout_gravity="center"/>
-
-        <TextView
-            android:id="@+id/tv_status_obesitas"
-            android:hint="Status Obesitas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:layout_gravity="center"/>
-
 
     </LinearLayout>
 
