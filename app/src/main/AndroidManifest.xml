@@ -18,9 +18,7 @@
         <activity
             android:name=".MensActivity"
             android:exported="false" />
-        <activity
-            android:name=".MenuLayanan"
-            android:exported="false" />
+
         <activity
             android:name=".Register"
             android:exported="false" />
