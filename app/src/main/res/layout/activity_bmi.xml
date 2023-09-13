@@ -10,8 +10,8 @@
         android:id="@+id/lin_1_bmi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
@@ -88,9 +88,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/lin_1_bmi"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/lin_1_bmi">
 
         <ImageView
             android:layout_width="150dp"
@@ -114,9 +114,9 @@
                     android:orientation="horizontal"
                     android:paddingStart="5dp"
                     android:paddingTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent">
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -157,13 +157,13 @@
         android:id="@+id/lin_4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/lin_2_bmi"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:orientation="vertical"
-        android:layout_marginTop="30dp"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp">
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lin_2_bmi">
 
         <LinearLayout
             android:id="@+id/lin_5"
@@ -174,25 +174,25 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/berat_badan"
-                android:layout_weight="2"
                 android:layout_marginEnd="5dp"
+                android:layout_weight="2"
+                android:hint="@string/berat_badan"
                 app:boxCornerRadiusBottomEnd="15dp"
-                app:boxCornerRadiusTopStart="15dp"
                 app:boxCornerRadiusBottomStart="15dp"
-                app:boxCornerRadiusTopEnd="15dp">
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/berat_badan"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.cardview.widget.CardView
-                android:layout_margin="5dp"
                 android:layout_width="100dp"
                 android:layout_height="55dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 app:cardBackgroundColor="@color/hijauBMI"
                 app:cardCornerRadius="15dp">
@@ -200,12 +200,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/plusjakarta"
                     android:text="kg"
                     android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/plusjakarta"
                     android:textSize="25sp"
-                    android:layout_gravity="center"/>
+                    android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
 
@@ -221,25 +221,25 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/tinggi_badan"
-                android:layout_weight="2"
                 android:layout_marginEnd="5dp"
+                android:layout_weight="2"
+                android:hint="@string/tinggi_badan"
                 app:boxCornerRadiusBottomEnd="15dp"
-                app:boxCornerRadiusTopStart="15dp"
                 app:boxCornerRadiusBottomStart="15dp"
-                app:boxCornerRadiusTopEnd="15dp">
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/tinggi_badan"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.cardview.widget.CardView
-                android:layout_margin="5dp"
                 android:layout_width="100dp"
                 android:layout_height="55dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 app:cardBackgroundColor="@color/hijauBMI"
                 app:cardCornerRadius="15dp">
@@ -247,12 +247,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/plusjakarta"
                     android:text="cm"
                     android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/plusjakarta"
                     android:textSize="25sp"
-                    android:layout_gravity="center"/>
+                    android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
 
@@ -264,36 +264,36 @@
         android:id="@+id/btn_hitung_bmi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:backgroundTint="@color/hijauBMI"
         android:text="@string/hitung"
         android:textSize="25sp"
-        android:layout_margin="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lin_4"/>
+        app:layout_constraintTop_toBottomOf="@+id/lin_4" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/btn_hitung_bmi"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="20dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_hitung_bmi">
 
         <ImageView
             android:id="@+id/iv_status_obesitas"
-            android:src="@drawable/obesity"
             android:layout_width="100dp"
             android:layout_height="200dp"
+            android:layout_gravity="center"
             android:layout_weight="2"
-            android:layout_gravity="center"/>
+            android:src="@drawable/obesity" />
 
         <TextView
             android:id="@+id/tv_status_obesitas"
-            android:hint="Status Obesitas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="2"
-            android:layout_gravity="center"/>
+            android:hint="Status Obesitas" />
 
     </LinearLayout>
 

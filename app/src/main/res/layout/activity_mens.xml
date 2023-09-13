@@ -10,8 +10,8 @@
         android:id="@+id/lin_1_mens"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
@@ -88,16 +88,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/lin_1_mens"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/lin_1_mens">
 
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/mens"
             android:layout_gravity="center_vertical"
-            android:layout_margin="20dp"/>
+            android:layout_margin="20dp"
+            android:src="@drawable/mens" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -116,9 +116,9 @@
                     android:orientation="horizontal"
                     android:paddingStart="5dp"
                     android:paddingTop="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent">
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -159,13 +159,13 @@
         android:id="@+id/lin_4_mens"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/lin_2_mens"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:orientation="vertical"
-        android:layout_marginTop="30dp"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp">
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lin_2_mens">
 
         <LinearLayout
             android:id="@+id/lin_5_mens"
@@ -176,14 +176,13 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/hari_pertama"
-                android:layout_weight="2"
                 android:layout_marginEnd="5dp"
+                android:layout_weight="2"
+                android:hint="@string/hari_pertama"
                 app:boxCornerRadiusBottomEnd="15dp"
-                app:boxCornerRadiusTopStart="15dp"
                 app:boxCornerRadiusBottomStart="15dp"
-                app:boxCornerRadiusTopEnd="15dp">
-
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp">
 
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -205,18 +204,18 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/lama_siklus"
-                android:layout_weight="2"
                 android:layout_marginEnd="5dp"
+                android:layout_weight="2"
+                android:hint="@string/lama_siklus"
                 app:boxCornerRadiusBottomEnd="15dp"
-                app:boxCornerRadiusTopStart="15dp"
                 app:boxCornerRadiusBottomStart="15dp"
-                app:boxCornerRadiusTopEnd="15dp">
+                app:boxCornerRadiusTopEnd="15dp"
+                app:boxCornerRadiusTopStart="15dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/siklus_mens"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -228,41 +227,40 @@
         android:id="@+id/btn_hitung_mens"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:backgroundTint="@color/merahMENS"
         android:text="@string/hitung"
         android:textSize="25sp"
-        android:layout_margin="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lin_4_mens"/>
+        app:layout_constraintTop_toBottomOf="@+id/lin_4_mens" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/btn_hitung_mens"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="20dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_hitung_mens">
 
         <ImageView
             android:id="@+id/iv_status_obesitas"
-            android:src="@drawable/obesity"
-
             android:layout_width="100dp"
+
             android:layout_height="200dp"
+            android:layout_gravity="center"
             android:layout_weight="2"
-            android:layout_gravity="center"/>
+            android:src="@drawable/obesity" />
 
         <TextView
             android:id="@+id/tv_status_obesitas"
-            android:hint="Status Obesitas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_weight="2"
-            android:layout_gravity="center"/>
+            android:hint="Status Obesitas" />
 
 
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
