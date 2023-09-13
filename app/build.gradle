@@ -43,6 +43,23 @@ android {
 
 dependencies {
 
+    //implementasi bahasa Java
+    implementation 'androidx.navigation:navigation-fragment:2.7.2'
+    implementation 'androidx.navigation:navigation-ui:2.7.2'
+
+    //kotlin
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.2")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.2")
+
+    // Feature module Support
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:2.7.2")
+
+    // Testing Navigation
+    androidTestImplementation("androidx.navigation:navigation-testing:2.7.2")
+
+    // Jetpack Compose Integration
+    implementation("androidx.navigation:navigation-compose:2.7.2")
+
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.5.0'
