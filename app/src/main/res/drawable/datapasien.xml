@@ -7,7 +7,7 @@
                 android:width="1dp">
             </stroke>
             <solid
-                android:color="@color/gray"/>
+                android:color="@color/abuCARDVIEW"/>
             <corners android:radius="10dp"/>
         </shape>
     </item>

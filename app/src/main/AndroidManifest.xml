@@ -13,12 +13,23 @@
         android:theme="@style/Theme.Kayuringinsehat"
         tools:targetApi="31">
         <activity
+            android:name=".NomorAntrian"
+            android:exported="false" />
+        <activity
+            android:name=".PoliTersedia"
+            android:exported="false" />
+        <activity
+            android:name=".DaftarPoli"
+            android:exported="false" />
+        <activity
+            android:name=".FaskesTersedia"
+            android:exported="false" />
+        <activity
             android:name=".GiziActivity"
             android:exported="false" />
         <activity
             android:name=".MensActivity"
             android:exported="false" />
-
         <activity
             android:name=".Register"
             android:exported="false" />

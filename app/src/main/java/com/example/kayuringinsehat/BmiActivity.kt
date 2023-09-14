@@ -13,19 +13,20 @@ class BmiActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityBmiBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        binding.btnHitungBmi.setOnClickListener {
-            hitungBMI()
-        }
     }
 
-    private fun hitungBMI() {
+//        binding.btnHitungBmi.setOnClickListener {
+//            hitungBMI()
+//        }
+//    }
 
-        val stringInputBerat = binding.beratBadan.text.toString()
-        val beratBmi = stringInputBerat.toDoubleOrNull()
-        if (beratBmi == )
-
-    }
+//    private fun hitungBMI() {
+//
+//        val stringInputBerat = binding.beratBadan.text.toString()
+//        val beratBmi = stringInputBerat.toDoubleOrNull()
+//        if (beratBmi == )
+//
+//    }
 
 //        val stringInTextField = binding.costOfServiceEditText.text.toString()
 //        val cost = stringInTextField.toDoubleOrNull()
