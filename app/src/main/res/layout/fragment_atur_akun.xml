@@ -7,6 +7,7 @@
     tools:context=".AturAkun">
 
     <LinearLayout
+        android:id="@+id/ly_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
@@ -20,7 +21,7 @@
             android:src="@drawable/profile"/>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/abuCARDVIEW"
                 android:layout_marginTop="6dp"
@@ -34,12 +35,15 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_weight="2"
                         android:text="Pak Tua"
                         android:textStyle="bold"
+                        android:gravity="center"
                         android:fontFamily="@font/plusjakarta"
                         android:textColor="@color/biruMENU"/>
                     
                     <ImageView
+                        android:id="@+id/iv_editNama"
                         android:layout_width="15dp"
                         android:layout_height="15dp"
                         android:layout_gravity="center"
@@ -47,6 +51,471 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cv_menuTengah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:padding="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/ly_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="88dp"
+                android:layout_height="23dp"
+                app:cardCornerRadius="9dp"
+                android:backgroundTint="@color/abuCARDVIEW">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No. BPJS"
+                        android:fontFamily="@font/plusjakarta"
+                        android:textColor="@color/biruMENU"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:layout_gravity="center"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_noBPJS"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginStart="9dp"
+                android:backgroundTint="@color/abuCARDVIEW"
+                app:cardCornerRadius="9dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0006287391036"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:layout_marginStart="12dp"
+                        android:textColor="@color/biruMENU"
+                        android:fontFamily="@font/plusjakarta"
+                        android:textSize="12sp"
+                        android:gravity="left"
+                        android:layout_gravity="center"/>
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/pensil"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="88dp"
+                android:layout_height="23dp"
+                app:cardCornerRadius="9dp"
+                android:backgroundTint="@color/abuCARDVIEW">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:fontFamily="@font/plusjakarta"
+                    android:textColor="@color/biruMENU"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_email"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginStart="9dp"
+                android:backgroundTint="@color/abuCARDVIEW"
+                app:cardCornerRadius="9dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="paktua.kayaraya@gmail.com"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:layout_marginStart="12dp"
+                        android:textColor="@color/biruMENU"
+                        android:fontFamily="@font/plusjakarta"
+                        android:textSize="12sp"
+                        android:gravity="left"
+                        android:layout_gravity="center"/>
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/pensil"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="88dp"
+                android:layout_height="23dp"
+                app:cardCornerRadius="9dp"
+                android:backgroundTint="@color/abuCARDVIEW">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tgl. Lahir"
+                    android:fontFamily="@font/plusjakarta"
+                    android:textColor="@color/biruMENU"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_tglLahir"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginStart="9dp"
+                android:backgroundTint="@color/abuCARDVIEW"
+                app:cardCornerRadius="9dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="29 Desember 1975"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:layout_marginStart="12dp"
+                        android:textColor="@color/biruMENU"
+                        android:fontFamily="@font/plusjakarta"
+                        android:textSize="12sp"
+                        android:gravity="left"
+                        android:layout_gravity="center"/>
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/kalender"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="88dp"
+                android:layout_height="23dp"
+                app:cardCornerRadius="9dp"
+                android:backgroundTint="@color/abuCARDVIEW">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="J. Kelamin"
+                    android:fontFamily="@font/plusjakarta"
+                    android:textColor="@color/biruMENU"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_jKelamin"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginStart="9dp"
+                android:backgroundTint="@color/abuCARDVIEW"
+                app:cardCornerRadius="9dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laki - Laki"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:layout_marginStart="12dp"
+                        android:textColor="@color/biruMENU"
+                        android:fontFamily="@font/plusjakarta"
+                        android:textSize="12sp"
+                        android:gravity="left"
+                        android:layout_gravity="center"/>
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/pensil"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="88dp"
+                android:layout_height="23dp"
+                app:cardCornerRadius="9dp"
+                android:backgroundTint="@color/abuCARDVIEW">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GOl. Darah"
+                    android:fontFamily="@font/plusjakarta"
+                    android:textColor="@color/biruMENU"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_goldar"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:layout_marginStart="9dp"
+                android:backgroundTint="@color/abuCARDVIEW"
+                app:cardCornerRadius="9dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A+"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:layout_marginStart="12dp"
+                        android:textColor="@color/biruMENU"
+                        android:fontFamily="@font/plusjakarta"
+                        android:textSize="12sp"
+                        android:gravity="left"
+                        android:layout_gravity="center"/>
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/pensil"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cs_dataPasien"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:padding="10dp"
+        android:background="@drawable/datapasien2"
+        app:layout_constraintTop_toBottomOf="@id/cv_menuTengah"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:src="@drawable/refresh"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_lastchek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/plusjakarta"
+            android:text="last check: 23 Des 2023"
+            android:textColor="@color/biruMENU"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_refresh"
+            app:layout_constraintStart_toEndOf="@+id/iv_refresh"
+            app:layout_constraintTop_toTopOf="@+id/iv_refresh" />
+
+
+        <FrameLayout
+            android:id="@+id/fy_tensiDarah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lastchek">
+
+            <ImageView
+                android:id="@+id/iv_tensi"
+                android:layout_width="32dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:src="@drawable/tensi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_lastchek" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120/80"
+                android:textColor="@color/merahGOLDAR"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poesone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:fontFamily="@font/plusjakarta"
+                android:text="TENSI DARAH"
+                android:textColor="@color/biruMENU"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fy_hipertensi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lastchek">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/penpan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HIPERTENSI"
+                android:textColor="@color/merahGOLDAR"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poesone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:fontFamily="@font/plusjakarta"
+                android:text="RIWAYATSAKIT"
+                android:layout_marginStart="9dp"
+                android:textColor="@color/biruMENU"
+                android:textSize="8sp"
+                android:textStyle="bold"/>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_tentangApp"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="Tentang App"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/plusjakarta"
+        app:layout_constraintTop_toBottomOf="@+id/cs_dataPasien"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_keluar"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Keluar"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/plusjakarta"
+        app:layout_constraintTop_toBottomOf="@+id/btn_tentangApp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     
 

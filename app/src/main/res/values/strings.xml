@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Kayuringin Sehat</string>
     <string name="copyright">©kayuringinsehat</string>
+    <string name="sekibeing">MUHANMMAD AJI SAPUTRA</string>
+    <string name="jipan">PANJI FERYADI</string>
     <string name="masuk">Masuk</string>
     <string name="keluar">Keluar</string>
     <string name="daftar">Daftar</string>
@@ -69,6 +71,8 @@
     <string name="kecelakaaan">KECELAKAAN</string>
     <string name="melahirkan">MELAHIRKAN</string>
     <string name="ambulan">AMBULAN SEGERA HADIR</string>
+
+    <string name="pesan">Silakan Masukan Pesan</string>
 
     <string name="teks_bmi"><b>Indeks Massa Tubuh</b> adalah ukuran yang digunakan untuk mengetahui status gizi seseorang yang didapatkan dari <b>perbandingan berat dan tinggi badan</b>. Perhitungan IMT adalah dengan membagi berat badan (dalam kilogram) dengan tinggi badan (dalam meter kuadrat).</string>
     <string name="teks_mens"><b>Kalkulator Menstruasi</b> adalah perhitungan untuk menentukan kapan kemungkinan terjadinya ovulasi. Mengetahui masa subur penting bagi perempuan dan pasangan karena dapat meningkatkan peluang pembuahan jika dilakukan dengan efektif.</string>
