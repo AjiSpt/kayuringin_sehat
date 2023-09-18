@@ -14,12 +14,12 @@ android {
     }
 
     namespace 'com.example.kayuringinsehat'
-    compileSdk 34
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.kayuringinsehat"
         minSdk 21
-        targetSdk 34
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -42,6 +42,9 @@ android {
 }
 
 dependencies {
+
+    implementation 'androidx.recyclerview:recyclerview:1.3.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
 
     //implementasi bahasa Java
     implementation 'androidx.navigation:navigation-fragment:2.7.2'

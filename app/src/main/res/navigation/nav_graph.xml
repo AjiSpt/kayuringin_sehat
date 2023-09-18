@@ -10,13 +10,25 @@
         android:name="com.example.kayuringinsehat.LayananFragment"
         android:label="fragment_layanan"
         tools:layout="@layout/fragment_layanan" >
-        <action
+          <action
             android:id="@+id/action_layananFragment_to_listFaskesFragment2"
             app:destination="@id/listFaskesFragment" />
+        <action
+            android:id="@+id/action_layananFragment_to_tanyaFaskesFragment"
+            app:destination="@id/tanyaFaskesFragment" />
     </fragment>
     <fragment
         android:id="@+id/listFaskesFragment"
         android:name="com.example.kayuringinsehat.ListFaskesFragment"
         android:label="fragment_blank2"
-        tools:layout="@layout/fragment_list_faskes" />
+        tools:layout="@layout/fragment_list_faskes" >
+        <action
+            android:id="@+id/action_listFaskesFragment_to_tanyaFaskesFragment"
+            app:destination="@id/tanyaFaskesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tanyaFaskesFragment"
+        android:name="com.example.kayuringinsehat.TanyaFaskesFragment"
+        android:label="fragment_tanya_faskes"
+        tools:layout="@layout/fragment_tanya_faskes" />
 </navigation>

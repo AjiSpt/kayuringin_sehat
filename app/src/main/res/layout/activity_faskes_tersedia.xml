@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/plusjakarta"
-                android:text="@string/faskes_tersedia"
+                android:text="@string/rumah_sakit"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
