@@ -17,4 +17,10 @@
 
     // new change color navigation bottom
     <color name="hijauBaru">#01E0C8</color>
+    
+    // Color Bmi 
+    <color name="hijauBMIcharacter">#9CB327</color>
+    <color name="merahBMICharacter">#E64638</color>
+    <color name="orangeBMICharacter">#F48222</color>
+    <color name="biruBMICharacter">#5ABAE0</color>
 </resources>

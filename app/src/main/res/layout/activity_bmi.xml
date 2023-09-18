@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/lin_1_bmi"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -85,7 +85,7 @@
     <LinearLayout
         android:id="@+id/lin_2_bmi"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,7 +109,7 @@
                 <LinearLayout
                     android:id="@+id/lin_3_bmi"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:orientation="horizontal"
                     android:paddingStart="5dp"
                     android:paddingTop="5dp"
@@ -155,7 +155,7 @@
     <LinearLayout
         android:id="@+id/lin_4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="20dp"
@@ -262,18 +262,21 @@
     <Button
         android:id="@+id/btn_hitung_bmi"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:backgroundTint="@color/hijauBMI"
         android:text="@string/hitung"
         android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lin_4" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_hitung_bmi">
@@ -283,17 +286,34 @@
             android:layout_width="100dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
-            android:layout_weight="2"
             android:src="@drawable/obesity"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Index Masa Tubuh Anda"
+                android:textStyle="bold"
+                android:fontFamily="@font/plusjakarta"
+                android:textColor="@color/biruMENU"
+                android:textSize="30dp"
+                android:gravity="center"/>
 
         <TextView
             android:id="@+id/tv_status_obesitas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/biruMENU"
+            android:fontFamily="@font/plusjakarta"
             android:hint="Status Obesitas" />
-
+        </LinearLayout>
     </LinearLayout>
 
 
