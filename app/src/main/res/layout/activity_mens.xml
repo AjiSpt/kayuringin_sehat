@@ -177,18 +177,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
-                android:layout_weight="2"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/calender"
+                app:boxStrokeColor="@color/merahMENS"
+                app:endIconTint="@color/merahMENS"
                 android:hint="@string/hari_pertama"
+                android:textColorHint="@color/merahMENS"
                 app:boxCornerRadiusBottomEnd="15dp"
                 app:boxCornerRadiusBottomStart="15dp"
                 app:boxCornerRadiusTopEnd="15dp"
                 app:boxCornerRadiusTopStart="15dp">
 
-
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/hari_pertama"
+                    android:inputType="date"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -207,6 +211,10 @@
                 android:layout_marginEnd="5dp"
                 android:layout_weight="2"
                 android:hint="@string/lama_siklus"
+                app:color="@color/merahMENS"
+                app:boxStrokeColor="@color/merahMENS"
+                app:hintTextColor="@color/merahMENS"
+                android:textColorHint="@color/merahMENS"
                 app:boxCornerRadiusBottomEnd="15dp"
                 app:boxCornerRadiusBottomStart="15dp"
                 app:boxCornerRadiusTopEnd="15dp"
@@ -223,44 +231,44 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_hitung_mens"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:backgroundTint="@color/merahMENS"
-        android:text="@string/hitung"
-        android:textSize="25sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lin_4_mens" />
+<!--    <Button-->
+<!--        android:id="@+id/btn_hitung_mens"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:backgroundTint="@color/merahMENS"-->
+<!--        android:text="@string/hitung"-->
+<!--        android:textSize="25sp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/lin_4_mens" />-->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_hitung_mens">
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="20dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btn_hitung_mens">-->
 
-        <ImageView
-            android:id="@+id/iv_status_obesitas"
-            android:layout_width="100dp"
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_status_obesitas"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_weight="2"-->
+<!--            android:src="@drawable/obesity" />-->
 
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:layout_weight="2"
-            android:src="@drawable/obesity" />
-
-        <TextView
-            android:id="@+id/tv_status_obesitas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="2"
-            android:hint="Status Obesitas" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_status_obesitas"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_weight="2"-->
+<!--            android:hint="Status Obesitas" />-->
 
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
