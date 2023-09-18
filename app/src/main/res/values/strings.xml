@@ -35,7 +35,7 @@
 
     <string name="tahukah_kamu">Tahukah Kamu?</string>
 
-    <string name="hari_pertama">Hari Pertama Haid</string>
+    <string name="hari_pertama">Hari Pertama Haid (dd-m-yyyy)</string>
     <string name="lama_siklus">Lama Siklus Haid (Rata-Rata)</string>
     <string name="berat_badan">Berat Badan</string>
     <string name="tinggi_badan">Tinggi Badan</string>
