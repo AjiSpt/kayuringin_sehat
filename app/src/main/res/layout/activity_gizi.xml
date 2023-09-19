@@ -259,10 +259,8 @@
             android:layout_weight="2"
             android:hint="Status Obesitas" />
 
-
     </LinearLayout>
 
-    </LinearLayout>
 
 
 

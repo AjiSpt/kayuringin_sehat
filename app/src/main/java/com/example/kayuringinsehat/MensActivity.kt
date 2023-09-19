@@ -3,17 +3,26 @@ package com.example.kayuringinsehat
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.EditText
+import com.example.kayuringinsehat.databinding.ActivityMensBinding
 import java.util.Calendar
 
 class MensActivity : AppCompatActivity() {
+
+    private lateinit var binding : ActivityMensBinding
 
     // on below line creating a variable
     lateinit var dateEdt: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mens)
+        binding = ActivityMensBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val number = (28..45).map { it.toString() }.toTypedArray()
+        val adapter = ArrayAdapter(this,R.layout.list_mens, number)
+        binding.atDropDown.setAdapter(adapter)
 
         // on beloew line we are initializing our variables.
         dateEdt = findViewById(R.id.hari_pertama)
@@ -37,7 +46,7 @@ class MensActivity : AppCompatActivity() {
             val datePickerDialog = DatePickerDialog(
                 // on below line we are passing context.
                 this,
-                { view, year, monthOfYear, dayOfMount ->
+                {view, year, monthOfYear, dayOfMount ->
                     // on below line we are setting
                     // date to our edit text.
                     val dat = (dayOfMount.toString() + "-" + (monthOfYear + 1) + "-" + year)
@@ -51,8 +60,8 @@ class MensActivity : AppCompatActivity() {
             )
             // at last we are calling show
             // to display our date picker dioalog
+            datePickerDialog.datePicker?.maxDate = System.currentTimeMillis()
             datePickerDialog.show()
         }
-
     }
 }

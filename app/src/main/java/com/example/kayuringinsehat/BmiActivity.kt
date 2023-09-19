@@ -42,7 +42,6 @@ class BmiActivity : AppCompatActivity() {
                 Toast.makeText(this, "Tinggi Badan Tidak Boleh Kosong", Toast.LENGTH_SHORT).show()
                 return false
             }
-
             else -> {
                 return true
             }
