@@ -12,19 +12,19 @@
         android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_profile_bmi"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_weight="1"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/hijauBMI"
             android:orientation="vertical"
-            app:cardCornerRadius="30dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:cardCornerRadius="30dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -44,13 +44,11 @@
             android:id="@+id/cv_judul_bmi"
             android:layout_width="230dp"
             android:layout_height="50dp"
-            android:layout_marginStart="20dp"
+            android:layout_weight="10"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/hijauBMI"
             android:orientation="vertical"
-            app:cardCornerRadius="30dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:cardCornerRadius="30dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -66,6 +64,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="55dp"
             android:layout_height="50dp"
+            android:layout_weight="1"
             android:layout_margin="20dp"
             android:backgroundTint="@color/hijauBMI"
             android:drawable="@drawable/kembali"

@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/tanyaFaskesFragment"
-        android:name="com.example.kayuringinsehat.TanyaFaskesFragment"
+        android:name="com.example.kayuringinsehat.tanyaFaskesFragment"
         android:label="fragment_tanya_faskes"
         tools:layout="@layout/fragment_tanya_faskes" />
 </navigation>
