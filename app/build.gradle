@@ -10,7 +10,7 @@ plugins {
 android {
 
     buildFeatures {
-        viewBinding = true
+        viewBinding true
     }
 
     namespace 'com.example.kayuringinsehat'
