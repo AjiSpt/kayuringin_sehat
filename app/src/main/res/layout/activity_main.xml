@@ -23,7 +23,7 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/cl_bottom"
         android:layout_width="match_parent"
-        android:layout_height="106dp"
+        android:layout_height="75dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -31,44 +31,69 @@
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/bottomAppBar"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
+            android:layout_height="match_parent"
             android:layout_gravity="bottom"
-            app:fabCradleMargin="12dp"
             android:backgroundTint="@color/biruMENU"
             app:fabCradleRoundedCornerRadius="10dp">
 
+
             <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/bottom_naview"
+                android:id="@+id/bottom_nav_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:itemTextColor="@color/hijauBaru"
+                android:backgroundTint="@color/biruMENU"
                 app:itemIconTint="@color/navbottom"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="10dp"
                 android:background="@android:color/transparent"
                 app:menu="@menu/button_menu"/>
 
         </com.google.android.material.bottomappbar.BottomAppBar>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/user"
-            android:backgroundTint="@color/white"
-            android:layout_gravity="center"
-            app:layout_anchor="@id/bottomAppBar"/>
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:clickable="true"-->
+<!--            android:contentDescription="@string/menu_darurat"-->
+<!--            android:contextClickable="true"-->
+<!--            android:src="@drawable/darurat_menu" />-->
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/menu_darurat"
-            android:layout_gravity="bottom"
-            android:gravity="center"
-            android:fontFamily="@font/plusjakarta"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="12sp"
-            android:layout_marginBottom="18dp"/>
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/buttonDarurat"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="top|center"-->
+<!--            android:background="@drawable/background_menu"-->
+<!--            app:layout_anchor="@+id/bottomAppBar"-->
+<!--            app:layout_anchorGravity="top|center">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center|top"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="60dp"-->
+<!--                    android:layout_height="60dp"-->
+<!--                    android:layout_gravity="center|top"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:fontFamily="@font/plusjakarta"-->
+<!--                    android:gravity="center"-->
+<!--                    android:src="@drawable/logo"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="0dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="@string/menu_darurat"-->
+<!--                    android:textColor="@color/white" />-->
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/layanan"
+        android:id="@+id/layananfaskes"
         android:title="Layanan"
-
         android:icon="@drawable/layanan"/>
 
     <item
-        android:id="@+id/daffaskes"
+        android:id="@+id/listfaskes"
         android:title="Daftar Faskes"
         android:icon="@drawable/daffaskes"/>
 
     <item
-        android:title=""
-        android:enabled="false"/>
-
-    <item
-        android:id="@+id/tanya"
+        android:id="@+id/tanyafaskes"
         android:title="Tanya"
         android:icon="@drawable/tanya"/>
 
