@@ -39,7 +39,8 @@
     <string name="lama_siklus">Lama Siklus Haid (Rata-Rata)</string>
     <string name="berat_badan">Berat Badan</string>
     <string name="tinggi_badan">Tinggi Badan</string>
-
+    <string name="usia_anak">Usia Anak</string>
+    <string name="aktivitas">FAKTOR AKTIVITAS</string>
 
     <string name="menu_layanan">LAYANAN</string>
     <string name="menu_faskes">DAFTAR FASKES</string>
@@ -47,7 +48,7 @@
     <string name="menu_tanya">TANYA</string>
     <string name="menu_akun">ATUR AKUN</string>
 
-    <string name="hitung">Hitung</string>
+    <string name="hitung">HITUNG</string>
     <string name="rumah_sakit">RUMAH SAKIT</string>
     <string name="puskesmas">PUSKESMAS</string>
     <string name="klinik">KLINIK</string>
