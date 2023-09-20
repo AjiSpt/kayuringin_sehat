@@ -8,12 +8,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
-import com.example.kayuringinsehat.databinding.ActivityBmiBinding
 
 
 class BmiActivity : AppCompatActivity() {
-
-    lateinit var binding : ActivityBmiBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
