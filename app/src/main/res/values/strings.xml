@@ -75,6 +75,8 @@
 
     <string name="pesan">Silakan Masukan Pesan</string>
 
+    <string name="mens_info">Masa Subur Anda</string>
+
     <string name="teks_bmi"><b>Indeks Massa Tubuh</b> adalah ukuran yang digunakan untuk mengetahui status gizi seseorang yang didapatkan dari <b>perbandingan berat dan tinggi badan</b>. Perhitungan IMT adalah dengan membagi berat badan (dalam kilogram) dengan tinggi badan (dalam meter kuadrat).</string>
     <string name="teks_mens"><b>Kalkulator Menstruasi</b> adalah perhitungan untuk menentukan kapan kemungkinan terjadinya ovulasi. Mengetahui masa subur penting bagi perempuan dan pasangan karena dapat meningkatkan peluang pembuahan jika dilakukan dengan efektif.</string>
     <string name="teks_gizi"><b>Menurut FAO &amp; WHO</b> Gizi anak adalah hal yang penting untuk pertumbuhan dan perkembangan anak. Anak-anak memerlukan asupan gizi berdasarkan jumlah kalori yang dibutuhkan untuk tumbuh &amp; berkembang secara optimal untuk mencegah Stunting, Wasting, dan Obesitas.</string>

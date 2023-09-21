@@ -170,7 +170,6 @@
         android:layout_height="wrap_content"
         app:boxStrokeColor="@color/biruGIZI"
         app:counterTextColor="@color/biruGIZI"
-        app:startIconDrawable="@drawable/berat"
         android:hint="@string/berat_badan"
         android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="@+id/tinggibadan_gizi"

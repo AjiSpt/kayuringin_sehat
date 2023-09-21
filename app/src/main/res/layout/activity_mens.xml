@@ -250,31 +250,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lin_4_mens" />
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_margin="20dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        android:orientation="horizontal"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/btn_hitung_mens">-->
-
-<!--        <ImageView-->
-<!--            android:id="@+id/iv_status_obesitas"-->
-<!--            android:layout_width="100dp"-->
-<!--            android:layout_height="200dp"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:layout_weight="2"-->
-<!--            android:src="@drawable/obesity" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/tv_status_obesitas"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:layout_weight="2"-->
-<!--            android:hint="Status Obesitas" />-->
-<!--    </LinearLayout>-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/mens_info"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/merahMENS"
+        android:fontFamily="@font/plusjakarta"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_hitung_mens"
+        app:layout_constraintStart_toStartOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
