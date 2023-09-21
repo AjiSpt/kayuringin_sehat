@@ -40,7 +40,7 @@
     <string name="berat_badan">Berat Badan</string>
     <string name="tinggi_badan">Tinggi Badan</string>
     <string name="usia_anak">Usia Anak</string>
-    <string name="aktivitas">FAKTOR AKTIVITAS</string>
+    <string name="aktivitas">AKTIVITAS HARIAN</string>
 
     <string name="menu_layanan">LAYANAN</string>
     <string name="menu_faskes">DAFTAR FASKES</string>
@@ -78,6 +78,15 @@
     <string name="teks_bmi"><b>Indeks Massa Tubuh</b> adalah ukuran yang digunakan untuk mengetahui status gizi seseorang yang didapatkan dari <b>perbandingan berat dan tinggi badan</b>. Perhitungan IMT adalah dengan membagi berat badan (dalam kilogram) dengan tinggi badan (dalam meter kuadrat).</string>
     <string name="teks_mens"><b>Kalkulator Menstruasi</b> adalah perhitungan untuk menentukan kapan kemungkinan terjadinya ovulasi. Mengetahui masa subur penting bagi perempuan dan pasangan karena dapat meningkatkan peluang pembuahan jika dilakukan dengan efektif.</string>
     <string name="teks_gizi"><b>Menurut FAO &amp; WHO</b> Gizi anak adalah hal yang penting untuk pertumbuhan dan perkembangan anak. Anak-anak memerlukan asupan gizi berdasarkan jumlah kalori yang dibutuhkan untuk tumbuh &amp; berkembang secara optimal untuk mencegah Stunting, Wasting, dan Obesitas.</string>
+
+    <string name="keterangan_reeGIZI"><b>Kebutuhan Energi Basal</b>: Jumlah energi yang dibutuhkan oleh tubuh untuk menjalankan fungsi-fungsinya secara normal tanpa aktivitas.</string>
+    <string name="keterangan_totalGIZI"><b>Kebutuhan Energi Total</b>: Kebutuhan Energi Basal ditambah aktivitas yang dilakukan.</string>
+
+    <string name="nilai_basal">Kebutuhan Energi Basal: <b>%s kkal/hari</b></string>
+    <string name="nilai_total">Kebutuhan Energi Total: <b>%s kkal/hari</b></string>
+
+    <string name="pilih_usia">Pilih Usia</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

@@ -57,7 +57,7 @@ dependencies {
 
     // Feature module Support
     implementation("androidx.navigation:navigation-dynamic-features-fragment:2.7.2")
-    implementation 'androidx.core:core-ktx:+'
+    implementation 'androidx.core:core-ktx:1.12.0'
 
     // Testing Navigation
     androidTestImplementation("androidx.navigation:navigation-testing:2.7.2")
@@ -65,11 +65,11 @@ dependencies {
     // Jetpack Compose Integration
     implementation("androidx.navigation:navigation-compose:2.7.2")
 
-    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.google.firebase:firebase-auth-ktx:21.1.0'
+    implementation 'com.google.firebase:firebase-auth-ktx:22.1.2'
     implementation 'com.google.firebase:firebase-database-ktx:20.2.2'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
@@ -81,4 +81,11 @@ dependencies {
     //BOM
     implementation(platform('com.google.firebase:firebase-bom:32.2.3'))
     implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+
+    // Add this line to add the binding library
+    implementation 'androidx.databinding:databinding-runtime:8.1.1'
+//    kapt 'androidx.databinding:databinding-compiler:8.1.1'
 }
