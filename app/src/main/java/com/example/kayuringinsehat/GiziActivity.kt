@@ -15,7 +15,6 @@ import kotlin.math.ceil
 
 class GiziActivity : AppCompatActivity() {
 
-    //TODO: Deklarasi Variabel Binding sebagai Instance ActivityMainBinding.
     private lateinit var binding: ActivityGiziBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,16 +58,20 @@ class GiziActivity : AppCompatActivity() {
     }
 
 //    private fun hitung_giziTotal(){
-//
-//        //TODO: Ambil data yang diinput user ke Aktivitas Harian
-//        val aktivitasHarian = when (binding.radiogroupAktivitas.checkedRadioButtonId) {
-//            R.id.istirahat -> 1.2
-//            R.id.ringan -> 1.3
-//            R.id.sedang -> 1.5
-//            R.id.berat -> 1.7
-//            else -> 1.9
-//        }
-//    }
 
 
 }
+
+
+//    }
+//        }
+//            else -> 1.9
+//            R.id.berat -> 1.7
+//            R.id.sedang -> 1.5
+//            R.id.ringan -> 1.3
+//            R.id.istirahat -> 1.2
+//        val aktivitasHarian = when (binding.radiogroupAktivitas.checkedRadioButtonId) {
+//        //TODO: Ambil data yang diinput user ke Aktivitas Harian
+//
+//TODO: Deklarasi Variabel Binding sebagai Instance ActivityMainBinding.
+
