@@ -1,26 +1,23 @@
 package com.example.kayuringinsehat
 
-import android.R
-import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.example.kayuringinsehat.databinding.ActivityGiziBinding
 import com.google.android.material.textfield.TextInputLayout
 import com.google.android.play.integrity.internal.c
+import java.text.NumberFormat
 import kotlin.math.ceil
 
 class GiziActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityGiziBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        //TODO: Membuat Binding Instance dari Layout activity_gizi.xml
         binding = ActivityGiziBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -28,50 +25,76 @@ class GiziActivity : AppCompatActivity() {
             this, android.R.layout.simple_list_item_1,
             (1..18).map { it.toString() }.toList()
         )
-        binding.autoCompleteText.setAdapter(adapter)
-        binding.autoCompleteText.setOnClickListener {
-            binding.autoCompleteText.showDropDown()
+        binding.usiaAnak.setAdapter(adapter)
+        binding.usiaAnak.setOnClickListener {
+            binding.usiaAnak.showDropDown()
         }
 
         binding.buttonHitunggizi.setOnClickListener {
-            hitung_giziBasal()
+            hitungGizi()
         }
     }
 
-    private fun hitung_giziBasal() {
+    fun hitungGizi() {
+        val inputTinggi = binding.tinggibadanGiziEdittext.text.toString()
+        val tinggi = inputTinggi.toIntOrNull()
+        if (tinggi == null || tinggi == 0) {
+            displaygizi(0.0, 0.0)
+            Toast.makeText(this, "Tinggi Badan Tidak Boleh Kosong", Toast.LENGTH_SHORT).show()
+            return
+        }
 
-        //TODO: Ambil data yg diinput user ke Tinggi Badan
-        val tinggiBadan = binding.tinggibadanGiziEdittext.text
+        val inputBerat = binding.beratbadanGiziEdittext.text.toString()
+        val berat = inputBerat.toDoubleOrNull()
+        if (berat == null || berat == 0.0) {
+            displaygizi(0.0, 0.0)
+            Toast.makeText(this, "Berat Badan Tidak Boleh Kosong", Toast.LENGTH_SHORT).show()
+            return
+        }
 
-        //TODO: Ambil data yang diinput user ke Berat Badan
-        val beratBadan = binding.beratbadanGiziEdittext.text.toString()
+        val inputUsia = binding.usiaAnak.text.toString()
+        val usia = inputUsia.toIntOrNull()
+        if (usia == null || usia == 0) {
+            displaygizi(0.0, 0.0)
+            Toast.makeText(this, "Usia Anak Tidak Boleh Kosong", Toast.LENGTH_SHORT).show()
+            return
+        }
 
-        //TODO: Ambil data yang diinput user ke Usia Anak
-        val usiaAnak = binding.autoCompleteText.text.toString()
+        val faktorAktivitas = when (binding.radioGroupAktivitas.checkedRadioButtonId) {
+            R.id.option_istirahat -> 1.2
+            R.id.option_ringan -> 1.3
+            R.id.option_sedang -> 1.5
+            R.id.option_berat -> 1.7
+            else -> 1.9
+        }
 
-        //val energiBasal = tinggiBadan * 1.2
+        val GiziBasal = (50 + (2.2 * berat) + (1.2 * tinggi) - (0.2 * usia)) * 24
+        val nilaiGiziBasal = kotlin.math.ceil(GiziBasal)
+
+        val GiziTotal = nilaiGiziBasal * faktorAktivitas
+        val nilaiGiziTotal = kotlin.math.ceil(GiziTotal)
+
+        displaygizi(nilaiGiziBasal, nilaiGiziTotal)
 
 
-//        var energi_basal = (50 + (2.2 * beratBadan!!) + (1.2 * tinggiBadan!!) - (0.2 * usiaAnak!!)) * 24
-//        ceil(energi_basal).also { energi_basal = it }
-//        binding.hasilgizi.text = getString(R.string.nilai_basal, energi_basal)
     }
 
-//    private fun hitung_giziTotal(){
+    private fun displaygizi(nilaiGiziBasal: Double, nilaiGiziTotal: Double) {
+        val formatBasal = NumberFormat.getInstance().format(nilaiGiziBasal)
+        binding.hasilgizi.text = getString(R.string.nilai_basal, formatBasal)
 
+        val formatTotal = NumberFormat.getInstance().format(nilaiGiziTotal)
+        binding.totalgizi.text = getString(R.string.nilai_total, formatTotal)
 
+    }
 }
 
 
-//    }
-//        }
-//            else -> 1.9
-//            R.id.berat -> 1.7
-//            R.id.sedang -> 1.5
-//            R.id.ringan -> 1.3
-//            R.id.istirahat -> 1.2
-//        val aktivitasHarian = when (binding.radiogroupAktivitas.checkedRadioButtonId) {
-//        //TODO: Ambil data yang diinput user ke Aktivitas Harian
-//
-//TODO: Deklarasi Variabel Binding sebagai Instance ActivityMainBinding.
+//binding.hasilgizi.text = nilaiGiziBasal.toString()
+//binding.totalgizi.text = nilaiGiziTotal.toString()
 
+
+//    private fun tampilanNilai(nilaiGiziBasal: Double, nilaiGiziTotal: Double) {
+//        binding.hasilgizi.text.toString() = getString(R.string.nilai_basal)
+//        binding.totalgizi.text.toString() = getString(R.string.nilai_total)
+//    }
