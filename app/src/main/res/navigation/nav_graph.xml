@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_layananFragment_to_tanyaFaskesFragment"
             app:destination="@id/tanyaFaskesFragment" />
+        <action
+            android:id="@+id/action_layananFragment_to_aturAkun"
+            app:destination="@id/aturAkun" />
     </fragment>
     <fragment
         android:id="@+id/listFaskesFragment"
@@ -25,10 +28,26 @@
         <action
             android:id="@+id/action_listFaskesFragment_to_tanyaFaskesFragment"
             app:destination="@id/tanyaFaskesFragment" />
+        <action
+            android:id="@+id/action_listFaskesFragment_to_aturAkun"
+            app:destination="@id/aturAkun" />
     </fragment>
     <fragment
         android:id="@+id/tanyaFaskesFragment"
         android:name="com.example.kayuringinsehat.tanyaFaskesFragment"
         android:label="fragment_tanya_faskes"
-        tools:layout="@layout/fragment_tanya_faskes" />
+        tools:layout="@layout/fragment_tanya_faskes" >
+        <action
+            android:id="@+id/action_tanyaFaskesFragment_to_aturAkun"
+            app:destination="@id/aturAkun" />
+    </fragment>
+    <fragment
+        android:id="@+id/aturAkun"
+        android:name="com.example.kayuringinsehat.AturAkun"
+        android:label="fragment_atur_akun"
+        tools:layout="@layout/fragment_atur_akun" >
+        <action
+            android:id="@+id/action_aturAkun_to_layananFragment"
+            app:destination="@id/layananFragment" />
+    </fragment>
 </navigation>

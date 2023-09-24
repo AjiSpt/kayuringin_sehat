@@ -1,21 +1,20 @@
 package com.example.kayuringinsehat
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
+import android.view.View
 import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import com.example.kayuringinsehat.databinding.ActivityGiziBinding
-import com.google.android.material.textfield.TextInputLayout
-import com.google.android.play.integrity.internal.c
 import java.text.NumberFormat
-import kotlin.math.ceil
 
 class GiziActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityGiziBinding
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityGiziBinding.inflate(layoutInflater)
@@ -32,6 +31,54 @@ class GiziActivity : AppCompatActivity() {
 
         binding.buttonHitunggizi.setOnClickListener {
             hitungGizi()
+        }
+
+        binding.cardviewKembaliGizi.setOnTouchListener { view, motionEvent ->
+            when (motionEvent.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    // Menampilkan efek sentuhan saat ditekan
+                    binding.cardviewKembaliGizi.animate().scaleX(0.9f).scaleY(0.9f).start()
+                }
+                MotionEvent.ACTION_UP -> {
+                    // Mengembalikan ukuran cardview ke semula
+                    binding.cardviewKembaliGizi.animate().scaleX(1f).scaleY(1f).start()
+                    startActivity(Intent(this, MainActivity::class.java))
+                }
+            }
+            true
+        }
+
+        binding.cardviewProfileGizi.setOnTouchListener { view, motionEvent ->
+            when (motionEvent.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    binding.cardviewProfileGizi.animate().scaleX(0.9f).scaleY(0.9f).start()
+                }
+                MotionEvent.ACTION_UP -> {
+                    binding.cardviewProfileGizi.animate().scaleX(1f).scaleY(1f).start()
+                    startActivity(Intent(this, MainActivity::class.java))
+                }
+            }
+            true
+                //val intent = Intent(this, MainActivity::class.java)
+                //startActivity(intent)
+        }
+    }
+
+    //TODO: blok kode untuk pindah ke fragment Atur_Akun tapi belum selesai
+    @Deprecated("Deprecated in Java")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            val fragmentAkun = AturAkunFragment()
+            val bundle = data?.extras
+            fragmentAkun.arguments = bundle
+            //fragmentAkun.arguments = data
+
+            val fragmentManager = supportFragmentManager
+            fragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, fragmentAkun)
+                .commit()
         }
     }
 
@@ -75,8 +122,6 @@ class GiziActivity : AppCompatActivity() {
         val nilaiGiziTotal = kotlin.math.ceil(GiziTotal)
 
         displaygizi(nilaiGiziBasal, nilaiGiziTotal)
-
-
     }
 
     private fun displaygizi(nilaiGiziBasal: Double, nilaiGiziTotal: Double) {
