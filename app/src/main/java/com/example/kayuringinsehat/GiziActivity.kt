@@ -48,6 +48,8 @@ class GiziActivity : AppCompatActivity() {
             true
         }
 
+
+
         binding.cardviewProfileGizi.setOnTouchListener { view, motionEvent ->
             when (motionEvent.action) {
                 MotionEvent.ACTION_DOWN -> {
@@ -133,13 +135,3 @@ class GiziActivity : AppCompatActivity() {
 
     }
 }
-
-
-//binding.hasilgizi.text = nilaiGiziBasal.toString()
-//binding.totalgizi.text = nilaiGiziTotal.toString()
-
-
-//    private fun tampilanNilai(nilaiGiziBasal: Double, nilaiGiziTotal: Double) {
-//        binding.hasilgizi.text.toString() = getString(R.string.nilai_basal)
-//        binding.totalgizi.text.toString() = getString(R.string.nilai_total)
-//    }
