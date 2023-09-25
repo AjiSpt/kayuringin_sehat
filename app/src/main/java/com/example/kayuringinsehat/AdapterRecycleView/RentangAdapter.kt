@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 //import com.example.kayuringinsehat.ImageRentang
 import com.example.kayuringinsehat.R
 
-//class RentangAdapter(
+class RentangAdapter(
 //    private val data: List<ImageRentang>
 //) : RecyclerView.Adapter<RentangAdapter.RentangViewHolder>() {
 //
@@ -35,4 +35,4 @@ import com.example.kayuringinsehat.R
 //
 //class ImageRentang(
 //    val imageResource: Int
-//)
+)

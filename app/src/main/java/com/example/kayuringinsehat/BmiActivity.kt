@@ -45,6 +45,7 @@ class BmiActivity : AppCompatActivity() {
 
     private fun hasilTampilan(bmi: Float) {
         binding.tvStatusObesitas.text = bmi.toString()
+        binding.tvImt.text = "Index Masa Tubuh Anda"
         var color = 0
 
         when {

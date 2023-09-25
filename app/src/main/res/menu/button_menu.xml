@@ -2,21 +2,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/layananfaskes"
-        android:title="Layanan"
+        android:title="@string/menu_layanan"
         android:icon="@drawable/layanan"/>
 
     <item
         android:id="@+id/listfaskes"
-        android:title="Daftar Faskes"
+        android:title="@string/menu_faskes"
         android:icon="@drawable/daffaskes"/>
 
     <item
+        android:id="@+id/daruarat"
+        android:title="@string/menu_darurat"
+        android:icon="@drawable/add2"/>
+
+    <item
         android:id="@+id/tanyafaskes"
-        android:title="Tanya"
+        android:title="@string/menu_tanya"
         android:icon="@drawable/tanya"/>
 
     <item
         android:id="@+id/aturakun"
-        android:title="Atur Akun"
+        android:title="@string/menu_tanya"
         android:icon="@drawable/user"/>
 </menu>

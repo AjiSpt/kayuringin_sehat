@@ -6,262 +6,263 @@
     android:layout_height="match_parent"
     tools:context=".MensActivity">
 
-    <LinearLayout
-        android:id="@+id/lin_1_mens"
+    <ScrollView
+        android:id="@+id/scrollview_gizi"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv_profile_mens"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:backgroundTint="@color/merahMENS"
-                android:orientation="vertical"
-                app:cardCornerRadius="30dp">
+            <LinearLayout
+                android:id="@+id/lin_1_mens"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                    <ImageView
-                        android:id="@+id/iv_profile_mens"
-                        android:layout_width="34dp"
-                        android:layout_height="34dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/profile" />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_profile_mens"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:backgroundTint="@color/merahMENS"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="30dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <ImageView
+                                android:id="@+id/iv_profile_mens"
+                                android:layout_width="34dp"
+                                android:layout_height="34dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/profile" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_judul_mens"
+                        android:layout_width="230dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/merahMENS"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="30dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/plusjakarta"
+                            android:text="@string/mens"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="55dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="12dp"
+                        android:backgroundTint="@color/merahMENS"
+                        android:drawable="@drawable/kembali"
+                        app:cardCornerRadius="30dp">
+
+                        <ImageView
+                            android:id="@+id/iv_kembaliBack"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/kembaliback" />
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv_judul_mens"
-                android:layout_width="230dp"
-                android:layout_height="50dp"
-                android:layout_weight="2"
-                android:layout_marginStart="20dp"
-                android:backgroundTint="@color/merahMENS"
-                android:orientation="vertical"
-                app:cardCornerRadius="30dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/plusjakarta"
-                    android:text="@string/mens"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="55dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="12dp"
-                android:backgroundTint="@color/merahMENS"
-                android:drawable="@drawable/kembali"
-                app:cardCornerRadius="30dp">
+            <LinearLayout
+                android:id="@+id/lin_2_mens"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:padding="10dp">
 
                 <ImageView
-                    android:id="@+id/iv_kembaliBack"
-                    android:layout_width="34dp"
-                    android:layout_height="34dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/kembaliback" />
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/lin_2_mens"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lin_1_mens">
-
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/mens" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#F5F1F1"
-            android:layout_marginStart="20dp"
-            app:cardCornerRadius="10dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="7dp">
+                    android:src="@drawable/mens" />
 
                 <LinearLayout
-                    android:id="@+id/lin_3_mens"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginEnd="10dp"
-                        android:src="@drawable/lampu" />
-
-                    <TextView
-                        android:layout_width="140dp"
-                        android:layout_height="20dp"
-                        android:fontFamily="casual"
-                        android:text="@string/tahukah_kamu"
-                        android:textColor="@color/kuningTAHUKAH"
-                        android:shadowColor="@color/abuCARDVIEW"
-                        android:textSize="14sp"
-                        android:shadowDx="4"
-                        android:shadowDy="4"
-                        android:shadowRadius="1"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/plusjakarta"
-                    android:gravity="center"
-                    android:paddingTop="8dp"
-                    android:text="@string/teks_mens"
-                    android:textColor="@color/merahMENS"
-                    android:textSize="10sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/lin_3_mens" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/lin_4_mens"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="10dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lin_2_mens">
-
-        <LinearLayout
-            android:id="@+id/lin_5_mens"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                app:endIconMode="custom"
-                app:endIconDrawable="@drawable/calender"
-                app:boxStrokeColor="@color/merahMENS"
-                app:endIconTint="@color/merahMENS"
-                android:hint="@string/hari_pertama"
-                android:textColorHint="@color/merahMENS"
-                app:boxCornerRadiusBottomEnd="15dp"
-                app:boxCornerRadiusBottomStart="15dp"
-                app:boxCornerRadiusTopEnd="15dp"
-                app:boxCornerRadiusTopStart="15dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/hari_pertama"
-                    android:inputType="date"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/lin_6_mens"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:orientation="horizontal">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:hint="@string/lama_siklus"
-                app:color="@color/merahMENS"
-                app:boxStrokeColor="@color/merahMENS"
-                app:hintTextColor="@color/merahMENS"
-                android:textColorHint="@color/merahMENS"
-                app:boxCornerRadiusBottomEnd="15dp"
-                app:boxCornerRadiusBottomStart="15dp"
-                app:boxCornerRadiusTopEnd="15dp"
-                app:boxCornerRadiusTopStart="15dp">
-
-                <AutoCompleteTextView
-                    android:id="@+id/at_dropDown"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="none"/>
+                    android:layout_marginStart="5dp"
+                    android:gravity="center">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#F5F1F1"
+                        app:cardCornerRadius="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="7dp">
+
+                            <LinearLayout
+                                android:id="@+id/lin_3_mens"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:src="@drawable/lampu" />
+
+                                <TextView
+                                    android:layout_width="140dp"
+                                    android:layout_height="20dp"
+                                    android:fontFamily="casual"
+                                    android:shadowColor="@color/abuCARDVIEW"
+                                    android:shadowDx="4"
+                                    android:shadowDy="4"
+                                    android:shadowRadius="1"
+                                    android:text="@string/tahukah_kamu"
+                                    android:textColor="@color/kuningTAHUKAH"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/plusjakarta"
+                                android:gravity="center"
+                                android:paddingTop="8dp"
+                                android:text="@string/teks_mens"
+                                android:textColor="@color/merahMENS"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_4_mens"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lin_5_mens"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:hint="@string/hari_pertama"
+                        android:textColorHint="@color/merahMENS"
+                        app:boxCornerRadiusBottomEnd="15dp"
+                        app:boxCornerRadiusBottomStart="15dp"
+                        app:boxCornerRadiusTopEnd="15dp"
+                        app:boxCornerRadiusTopStart="15dp"
+                        app:boxStrokeColor="@color/merahMENS"
+                        app:endIconDrawable="@drawable/calender"
+                        app:endIconMode="custom"
+                        app:endIconTint="@color/merahMENS">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/hari_pertama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="date" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_6_mens"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:hint="@string/lama_siklus"
+                        android:textColorHint="@color/merahMENS"
+                        app:boxCornerRadiusBottomEnd="15dp"
+                        app:boxCornerRadiusBottomStart="15dp"
+                        app:boxCornerRadiusTopEnd="15dp"
+                        app:boxCornerRadiusTopStart="15dp"
+                        app:boxStrokeColor="@color/merahMENS"
+                        app:color="@color/merahMENS"
+                        app:hintTextColor="@color/merahMENS">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/at_dropDown"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_hitung_mens"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/merahMENS"
+                android:fontFamily="@font/plusjakarta"
+                android:text="@string/hitung"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/plusjakarta"
+                android:text="@string/mens_info"
+                android:textColor="@color/merahMENS"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <CalendarView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"/>
+
         </LinearLayout>
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_hitung_mens"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:backgroundTint="@color/merahMENS"
-        android:text="@string/hitung"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lin_4_mens" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text="@string/mens_info"
-        android:layout_marginTop="15dp"
-        android:textColor="@color/merahMENS"
-        android:fontFamily="@font/plusjakarta"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:layout_marginStart="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/btn_hitung_mens"
-        app:layout_constraintStart_toStartOf="parent"/>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

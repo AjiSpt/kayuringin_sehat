@@ -25,6 +25,12 @@ class GiziActivity : AppCompatActivity() {
         binding = ActivityGiziBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.cardviewKembaliGizi.setOnClickListener {
+            val transcaction = supportFragmentManager.beginTransaction()
+            transcaction.replace(R.id.list_container, LayananFragment())
+            transcaction.commit()
+        }
+
         val adapter = ArrayAdapter(
             this, android.R.layout.simple_list_item_1,
             (1..18).map { it.toString() }.toList()
@@ -50,14 +56,14 @@ class GiziActivity : AppCompatActivity() {
         //TODO: Ambil data yang diinput user ke Usia Anak
         val usiaAnak = binding.autoCompleteText.text.toString()
 
-        //val energiBasal = tinggiBadan * 1.2
-
-
+//        val energiBasal = tinggiBadan * 1.2
+//
+//
 //        var energi_basal = (50 + (2.2 * beratBadan!!) + (1.2 * tinggiBadan!!) - (0.2 * usiaAnak!!)) * 24
 //        ceil(energi_basal).also { energi_basal = it }
 //        binding.hasilgizi.text = getString(R.string.nilai_basal, energi_basal)
-    }
-
+//    }
+//
 //    private fun hitung_giziTotal(){
 //
 //        //TODO: Ambil data yang diinput user ke Aktivitas Harian
@@ -69,6 +75,5 @@ class GiziActivity : AppCompatActivity() {
 //            else -> 1.9
 //        }
 //    }
-
-
+    }
 }

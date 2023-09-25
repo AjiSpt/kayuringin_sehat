@@ -38,20 +38,19 @@ class MensActivity : AppCompatActivity() {
             datePickerDialog.datePicker.maxDate = System.currentTimeMillis()
             datePickerDialog.show()
         }
-        binding.btnHitungMens.setOnClickListener {
-            val tglHariAwalHaid = binding.hariPertama.text.toString()
-            val siklusHaid = binding.atDropDown.text.toString()
-
-            if (tglHariAwalHaid != null && siklusHaid.isNotEmpty()){
-                val localDate = LocalDate.parse(tglHariAwalHaid)
-                val hasil = hitungHaid()
-            }
-        }
+//        binding.btnHitungMens.setOnClickListener {
+//            val tglHariAwalHaid = binding.hariPertama.text.toString()
+//            val siklusHaid = binding.atDropDown.text.toString()
+//
+//            if (tglHariAwalHaid != null && siklusHaid.isNotEmpty()){
+//                val localDate = LocalDate.parse(tglHariAwalHaid)
+//                val hasil = hitungHaid()
+//            }
+//        }
     }
 }
-
-fun hitungHaid(siklusHaid: Int, tglHariAwalHaid: LocalDate): String{
-    if (siklusHaid < 21 || siklusHaid > 35) {
-
-    }
-}
+//
+//fun hitungHaid(siklusHaid: Int, tglHariAwalHaid: LocalDate): String{
+//    if (siklusHaid < 21 || siklusHaid > 35) {
+//
+//    }

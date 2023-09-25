@@ -3,32 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/layananFragment">
+    app:startDestination="@id/layananfaskes">
 
     <fragment
-        android:id="@+id/layananFragment"
+        android:id="@+id/layananfaskes"
         android:name="com.example.kayuringinsehat.LayananFragment"
         android:label="fragment_layanan"
-        tools:layout="@layout/fragment_layanan" >
-          <action
-            android:id="@+id/action_layananFragment_to_listFaskesFragment2"
-            app:destination="@id/listFaskesFragment" />
-        <action
-            android:id="@+id/action_layananFragment_to_tanyaFaskesFragment"
-            app:destination="@id/tanyaFaskesFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_layanan" />
     <fragment
-        android:id="@+id/listFaskesFragment"
+        android:id="@+id/listfaskes"
         android:name="com.example.kayuringinsehat.ListFaskesFragment"
-        android:label="fragment_blank2"
-        tools:layout="@layout/fragment_list_faskes" >
-        <action
-            android:id="@+id/action_listFaskesFragment_to_tanyaFaskesFragment"
-            app:destination="@id/tanyaFaskesFragment" />
-    </fragment>
+        android:label="fragment_list_faskes"
+        tools:layout="@layout/fragment_list_faskes" />
     <fragment
-        android:id="@+id/tanyaFaskesFragment"
-        android:name="com.example.kayuringinsehat.tanyaFaskesFragment"
-        android:label="fragment_tanya_faskes"
-        tools:layout="@layout/fragment_tanya_faskes" />
+        android:id="@+id/tanyafaskes"
+        android:name="com.example.kayuringinsehat.Tanya"
+        android:label="fragment_tanya"
+        tools:layout="@layout/fragment_tanya" />
+    <fragment
+        android:id="@+id/aturakun"
+        android:name="com.example.kayuringinsehat.AturAkun"
+        android:label="fragment_atur_akun"
+        tools:layout="@layout/fragment_atur_akun" />
 </navigation>
