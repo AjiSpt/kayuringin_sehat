@@ -1,79 +1,135 @@
 package com.example.kayuringinsehat
 
-import android.R
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
+import android.view.View
 import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.Toast
 import com.example.kayuringinsehat.databinding.ActivityGiziBinding
-import com.google.android.material.textfield.TextInputLayout
-import com.google.android.play.integrity.internal.c
-import kotlin.math.ceil
+import java.text.NumberFormat
 
 class GiziActivity : AppCompatActivity() {
 
-    //TODO: Deklarasi Variabel Binding sebagai Instance ActivityMainBinding.
     private lateinit var binding: ActivityGiziBinding
-
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        //TODO: Membuat Binding Instance dari Layout activity_gizi.xml
         binding = ActivityGiziBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        binding.cardviewKembaliGizi.setOnClickListener {
-            val transcaction = supportFragmentManager.beginTransaction()
-            transcaction.replace(R.id.list_container, LayananFragment())
-            transcaction.commit()
-        }
 
         val adapter = ArrayAdapter(
             this, android.R.layout.simple_list_item_1,
             (1..18).map { it.toString() }.toList()
         )
-        binding.autoCompleteText.setAdapter(adapter)
-        binding.autoCompleteText.setOnClickListener {
-            binding.autoCompleteText.showDropDown()
+        binding.usiaAnak.setAdapter(adapter)
+        binding.usiaAnak.setOnClickListener {
+            binding.usiaAnak.showDropDown()
         }
 
         binding.buttonHitunggizi.setOnClickListener {
-            hitung_giziBasal()
+            hitungGizi()
+        }
+
+        binding.cardviewKembaliGizi.setOnTouchListener { view, motionEvent ->
+            when (motionEvent.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    // Menampilkan efek sentuhan saat ditekan
+                    binding.cardviewKembaliGizi.animate().scaleX(0.9f).scaleY(0.9f).start()
+                }
+                MotionEvent.ACTION_UP -> {
+                    // Mengembalikan ukuran cardview ke semula
+                    binding.cardviewKembaliGizi.animate().scaleX(1f).scaleY(1f).start()
+                    startActivity(Intent(this, MainActivity::class.java))
+                }
+            }
+            true
+        }
+
+        binding.cardviewProfileGizi.setOnTouchListener { view, motionEvent ->
+            when (motionEvent.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    binding.cardviewProfileGizi.animate().scaleX(0.9f).scaleY(0.9f).start()
+                }
+                MotionEvent.ACTION_UP -> {
+                    binding.cardviewProfileGizi.animate().scaleX(1f).scaleY(1f).start()
+                    startActivity(Intent(this, MainActivity::class.java))
+                }
+            }
+            true
+            //val intent = Intent(this, MainActivity::class.java)
+            //startActivity(intent)
         }
     }
 
-    private fun hitung_giziBasal() {
+    //TODO: blok kode untuk pindah ke fragment Atur_Akun tapi belum selesai
+    @Deprecated("Deprecated in Java")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
 
-        //TODO: Ambil data yg diinput user ke Tinggi Badan
-        val tinggiBadan = binding.tinggibadanGiziEdittext.text
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            val fragmentAkun = AturAkunFragment()
+            val bundle = data?.extras
+            fragmentAkun.arguments = bundle
+            //fragmentAkun.arguments = data
 
-        //TODO: Ambil data yang diinput user ke Berat Badan
-        val beratBadan = binding.beratbadanGiziEdittext.text.toString()
+            val fragmentManager = supportFragmentManager
+            fragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, fragmentAkun)
+                .commit()
+        }
+    }
 
-        //TODO: Ambil data yang diinput user ke Usia Anak
-        val usiaAnak = binding.autoCompleteText.text.toString()
+    fun hitungGizi() {
+        val inputTinggi = binding.tinggibadanGiziEdittext.text.toString()
+        val tinggi = inputTinggi.toIntOrNull()
+        if (tinggi == null || tinggi == 0) {
+            displaygizi(0.0, 0.0)
+            Toast.makeText(this, "Tinggi Badan Tidak Boleh Kosong", Toast.LENGTH_SHORT).show()
+            return
+        }
 
-//        val energiBasal = tinggiBadan * 1.2
-//
-//
-//        var energi_basal = (50 + (2.2 * beratBadan!!) + (1.2 * tinggiBadan!!) - (0.2 * usiaAnak!!)) * 24
-//        ceil(energi_basal).also { energi_basal = it }
-//        binding.hasilgizi.text = getString(R.string.nilai_basal, energi_basal)
-//    }
-//
-//    private fun hitung_giziTotal(){
-//
-//        //TODO: Ambil data yang diinput user ke Aktivitas Harian
-//        val aktivitasHarian = when (binding.radiogroupAktivitas.checkedRadioButtonId) {
-//            R.id.istirahat -> 1.2
-//            R.id.ringan -> 1.3
-//            R.id.sedang -> 1.5
-//            R.id.berat -> 1.7
-//            else -> 1.9
-//        }
-//    }
+        val inputBerat = binding.beratbadanGiziEdittext.text.toString()
+        val berat = inputBerat.toDoubleOrNull()
+        if (berat == null || berat == 0.0) {
+            displaygizi(0.0, 0.0)
+            Toast.makeText(this, "Berat Badan Tidak Boleh Kosong", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val inputUsia = binding.usiaAnak.text.toString()
+        val usia = inputUsia.toIntOrNull()
+        if (usia == null || usia == 0) {
+            displaygizi(0.0, 0.0)
+            Toast.makeText(this, "Usia Anak Tidak Boleh Kosong", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val faktorAktivitas = when (binding.radiogroupAktivitas.checkedRadioButtonId) {
+            R.id.istirahat -> 1.2
+            R.id.ringan -> 1.3
+            R.id.sedang -> 1.5
+            R.id.berat -> 1.7
+            else -> 1.9
+        }
+
+        val GiziBasal = (50 + (2.2 * berat) + (1.2 * tinggi) - (0.2 * usia)) * 24
+        val nilaiGiziBasal = kotlin.math.ceil(GiziBasal)
+
+        val GiziTotal = nilaiGiziBasal * faktorAktivitas
+        val nilaiGiziTotal = kotlin.math.ceil(GiziTotal)
+
+        displaygizi(nilaiGiziBasal, nilaiGiziTotal)
+    }
+
+    private fun displaygizi(nilaiGiziBasal: Double, nilaiGiziTotal: Double) {
+        val formatBasal = NumberFormat.getInstance().format(nilaiGiziBasal)
+        binding.hasilgizi.text = getString(R.string.nilai_basal, formatBasal)
+
+        val formatTotal = NumberFormat.getInstance().format(nilaiGiziTotal)
+        binding.totalgizi.text = getString(R.string.nilai_total, formatTotal)
+
     }
 }

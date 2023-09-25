@@ -183,7 +183,7 @@
                         android:id="@+id/aktivitas"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/biruGIZI"
+                        android:backgroundTint="@color/white"
                         app:cardCornerRadius="5dp">
 
                         <TextView
@@ -193,7 +193,7 @@
                             android:layout_margin="10dp"
                             android:fontFamily="@font/plusjakarta"
                             android:text="@string/aktivitas"
-                            android:textColor="@color/white"
+                            android:textColor="@color/biruGIZI"
                             android:textStyle="bold" />
 
                     </androidx.cardview.widget.CardView>
@@ -319,14 +319,15 @@
                         android:layout_width="180dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
+                        android:layout_marginBottom="30dp"
                         android:textColorHint="@color/biruGIZI"
                         app:startIconTint="@color/biruGIZI"
                         app:boxStrokeColor="@color/biruGIZI"
                         app:hintTextColor="@color/biruGIZI"
-                        app:startIconDrawable="@drawable/usia">
+                        app:startIconDrawable="@drawable/arrow">
 
                         <AutoCompleteTextView
-                            android:id="@+id/auto_complete_text"
+                            android:id="@+id/usiaAnak"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="none"
@@ -361,15 +362,29 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="10dp">
 
-                    <TextView
-                        android:id="@+id/hasilgizi"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:hint="NILAI KALORI"
-                        android:textSize="18dp" />
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/hasilgizi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/totalgizi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:textSize="15sp" />
+                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <TextView

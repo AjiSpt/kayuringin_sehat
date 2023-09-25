@@ -22,6 +22,6 @@
 
     <item
         android:id="@+id/aturakun"
-        android:title="@string/menu_tanya"
+        android:title="@string/menu_akun"
         android:icon="@drawable/user"/>
 </menu>

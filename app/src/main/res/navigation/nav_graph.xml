@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_tanya" />
     <fragment
         android:id="@+id/aturakun"
-        android:name="com.example.kayuringinsehat.AturAkun"
+        android:name="com.example.kayuringinsehat.AturAkunFragment"
         android:label="fragment_atur_akun"
         tools:layout="@layout/fragment_atur_akun" />
 </navigation>
