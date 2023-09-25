@@ -44,7 +44,8 @@
             android:exported="false" />
         <activity
             android:name=".FaskesTersedia"
-            android:exported="false" />
+            android:exported="false">
+        </activity>
         <activity
             android:name=".GiziActivity"
             android:exported="false">

@@ -56,7 +56,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/plusjakarta"
-                    android:text="@string/faskes_tersedia"
+                    android:text="@string/list_faskes"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
@@ -76,18 +76,19 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
-            android:id="@+id/rumahsakit"
+            android:id="@+id/cv_rumahsakit"
             android:layout_width="match_parent"
             android:layout_height="145dp"
             android:src="@drawable/listfaskes1" />
 
         <ImageView
-            android:id="@+id/puskesmas"
+            android:id="@+id/cv_puskesmas"
             android:layout_width="match_parent"
             android:layout_height="145dp"
             android:src="@drawable/listfaskes2"/>
 
         <ImageView
+            android:id="@+id/cv_klinik"
             android:layout_width="match_parent"
             android:layout_height="145dp"
             android:src="@drawable/listfaskes3"/>

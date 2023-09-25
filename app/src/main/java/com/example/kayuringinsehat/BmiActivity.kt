@@ -1,7 +1,9 @@
 package com.example.kayuringinsehat
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.kayuringinsehat.databinding.ActivityBmiBinding
@@ -27,6 +29,20 @@ class BmiActivity : AppCompatActivity() {
                 hasilTampilan(bmi2digits)
             }
         }
+        binding.cvKembaliBMI.setOnTouchListener { view, motionEvent ->
+            when (motionEvent.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    // Menampilkan efek sentuhan saat ditekan
+                    binding.cvKembaliBMI.animate().scaleX(0.9f).scaleY(0.9f).start()
+                }
+                MotionEvent.ACTION_UP -> {
+                    // Mengembalikan ukuran cardview ke semula
+                    binding.cvKembaliBMI.animate().scaleX(1f).scaleY(1f).start()
+                    startActivity(Intent(this, MainActivity::class.java))
+                }
+            }
+            true
+        }
     }
 
     private fun validateInput(berat: String?, tinggi: String?): Boolean {
@@ -43,7 +59,7 @@ class BmiActivity : AppCompatActivity() {
         }
     }
 
-    private fun hasilTampilan(bmi: Float) {
+    private fun hasilTampilan(bmi: Float ) {
         binding.tvStatusObesitas.text = bmi.toString()
         binding.tvImt.text = "Index Masa Tubuh Anda"
         var color = 0
