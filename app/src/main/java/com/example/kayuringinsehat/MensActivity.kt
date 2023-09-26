@@ -2,9 +2,11 @@ package com.example.kayuringinsehat
 
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MotionEvent
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.example.kayuringinsehat.databinding.ActivityMensBinding
@@ -52,6 +54,21 @@ class MensActivity : AppCompatActivity() {
 
         binding.btnHitungMens.setOnClickListener {
             hitungMens()
+        }
+
+        binding.cvKembaliMens.setOnTouchListener { view, motionEvent ->
+            when (motionEvent.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    // Menampilkan efek sentuhan saat ditekan
+                    binding.cvKembaliMens.animate().scaleX(0.9f).scaleY(0.9f).start()
+                }
+                MotionEvent.ACTION_UP -> {
+                    // Mengembalikan ukuran cardview ke semula
+                    binding.cvKembaliMens.animate().scaleX(1f).scaleY(1f).start()
+                    startActivity(Intent(this, MainActivity::class.java))
+                }
+            }
+            true
         }
     }
 
