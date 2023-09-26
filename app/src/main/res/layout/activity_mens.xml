@@ -194,7 +194,7 @@
                             android:id="@+id/hari_pertama"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="date" />
+                            android:inputType="number"/>
 
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
@@ -222,7 +222,7 @@
                         app:hintTextColor="@color/merahMENS">
 
                         <AutoCompleteTextView
-                            android:id="@+id/at_dropDown"
+                            android:id="@+id/siklus"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="none" />
@@ -245,20 +245,37 @@
                 android:textSize="25sp" />
 
             <TextView
+                android:id="@+id/masa_subur"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/plusjakarta"
-                android:text="@string/mens_info"
+                android:textColor="@color/biruGIZI"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/masa_ovulasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/plusjakarta"
+                android:textColor="@color/hijauBMI"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/masa_siklus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/plusjakarta"
                 android:textColor="@color/merahMENS"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
-            <CalendarView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"/>
 
         </LinearLayout>
     </ScrollView>
