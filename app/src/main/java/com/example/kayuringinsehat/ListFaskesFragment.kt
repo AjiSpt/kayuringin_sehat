@@ -30,6 +30,16 @@ class ListFaskesFragment : Fragment() {
             val intent = Intent(activity, FaskesTersedia::class.java)
             startActivity(intent)
         }
+
+        binding.cvPuskesmas.setOnClickListener {
+            val intent = Intent(activity, FaskesTersedia2::class.java)
+            startActivity(intent)
+        }
+
+        binding.cvKlinik.setOnClickListener {
+            val intent = Intent(activity, FaskesTersedia3::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onDestroy() {
