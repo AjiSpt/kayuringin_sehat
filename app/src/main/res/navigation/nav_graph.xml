@@ -9,20 +9,36 @@
         android:id="@+id/layananfaskes"
         android:name="com.example.kayuringinsehat.LayananFragment"
         android:label="fragment_layanan"
-        tools:layout="@layout/fragment_layanan" />
+        tools:layout="@layout/fragment_layanan" >
+        <action
+            android:id="@+id/action_layananfaskes_to_aturakun"
+            app:destination="@id/aturakun" />
+    </fragment>
     <fragment
         android:id="@+id/listfaskes"
         android:name="com.example.kayuringinsehat.ListFaskesFragment"
         android:label="fragment_list_faskes"
-        tools:layout="@layout/fragment_list_faskes" />
+        tools:layout="@layout/fragment_list_faskes" >
+        <action
+            android:id="@+id/action_listfaskes_to_aturakun"
+            app:destination="@id/aturakun" />
+    </fragment>
     <fragment
         android:id="@+id/tanyafaskes"
         android:name="com.example.kayuringinsehat.Tanya"
         android:label="fragment_tanya"
-        tools:layout="@layout/fragment_tanya" />
+        tools:layout="@layout/fragment_tanya" >
+        <action
+            android:id="@+id/action_tanyafaskes_to_aturakun"
+            app:destination="@id/aturakun" />
+    </fragment>
     <fragment
         android:id="@+id/aturakun"
         android:name="com.example.kayuringinsehat.AturAkunFragment"
         android:label="fragment_atur_akun"
-        tools:layout="@layout/fragment_atur_akun" />
+        tools:layout="@layout/fragment_atur_akun" >
+        <action
+            android:id="@+id/action_aturakun_to_layananfaskes"
+            app:destination="@id/layananfaskes" />
+    </fragment>
 </navigation>

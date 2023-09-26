@@ -21,12 +21,10 @@ class MainActivity : AppCompatActivity() {
             .findFragmentById(R.id.fragmentContainerView) as NavHostFragment
         navController = navHostFragment.navController
         setupWithNavController(binding.bottomNav, navController)
-//
-//        fragmentManager = supportFragmentManager
-//
-//        // Menambahkan fragment_layanan.xml ke FragmentContainerView di activity_main.xml
-//        fragmentManager.beginTransaction()
-//            .add(R.id.fragmentContainerView, LayananFragment())
-//            .commit()
+
+        // Listener untuk pindah fragment ketika Cardview ditap
+
+
+
     }
 }
