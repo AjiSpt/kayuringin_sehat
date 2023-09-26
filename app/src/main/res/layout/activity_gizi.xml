@@ -74,7 +74,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardview_kembali_gizi"
-                        android:layout_width="55dp"
+                        android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_marginStart="12dp"
                         android:backgroundTint="@color/biruGIZI"
