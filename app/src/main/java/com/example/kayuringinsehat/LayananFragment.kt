@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
@@ -21,6 +23,8 @@ class LayananFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var layananList:ArrayList<dataLayanan>
     private lateinit var makananAdaptor: layananAdaptor
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -60,9 +64,6 @@ class LayananFragment : Fragment() {
             startActivity(intent)
         }
 
-        binding.cvProfile.setOnClickListener {
-            this.findNavController().navigate(R.id.action_layananfaskes_to_aturakun)
-        }
     }
     private fun addDataToList(){
         layananList.add(dataLayanan(R.drawable.rentang1))

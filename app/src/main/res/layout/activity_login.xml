@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/Header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:src="@drawable/header"
         app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,7 +18,7 @@
     <TextView
         android:id="@+id/tv_Masuk"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:fontFamily="@font/plusjakarta"
         android:textStyle="bold"
         android:text="Masuk"
@@ -35,7 +35,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:cardBackgroundColor="@color/abuCARDVIEW"
         android:layout_marginTop="38dp"
         android:layout_marginStart="35dp"
@@ -50,71 +50,10 @@
             android:layout_height="match_parent"
             android:padding="17dp">
 
-<!--            <TextView-->
-<!--                android:id="@+id/tv_idMasuk"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:drawableLeft="@drawable/user"-->
-<!--                android:drawablePadding="4dp"-->
-<!--                android:fontFamily="@font/plusjakarta"-->
-<!--                android:shadowColor="@color/text_shadow"-->
-<!--                android:shadowDx="1"-->
-<!--                android:shadowDy="3"-->
-<!--                android:shadowRadius="1"-->
-<!--                android:text="Telphone/NIK/No.BPJS"-->
-<!--                android:textColor="@color/blue"-->
-<!--                android:textSize="15dp"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                tools:ignore="TextSizeCheck" />-->
-<!--            -->
-
-<!--            <EditText-->
-<!--                android:id="@+id/et_idMasuk"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:hint="Masukan Data"-->
-<!--                android:textSize="10sp"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/tv_idMasuk"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"/>-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/tv_pasMasuk"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="11sp"-->
-<!--                android:drawableLeft="@drawable/password"-->
-<!--                android:drawablePadding="4dp"-->
-<!--                android:fontFamily="@font/plusjakarta"-->
-<!--                android:shadowColor="@color/text_shadow"-->
-<!--                android:shadowDx="1"-->
-<!--                android:shadowDy="3"-->
-<!--                android:shadowRadius="1"-->
-<!--                android:text="Kata Sandi"-->
-<!--                android:textColor="@color/blue"-->
-<!--                android:textSize="15dp"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/et_idMasuk"-->
-<!--                tools:ignore="TextSizeCheck" />-->
-
-
-<!--            <EditText-->
-<!--                android:id="@+id/et_pasMasuk"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:hint="*****************"-->
-<!--                android:textSize="10sp"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/tv_pasMasuk"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                android:inputType="textPassword"-->
-<!--                tools:ignore="visual"/>-->
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tf_idMasuk"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:hint="Telephone/Email/NIK/No.BPJS"
                 app:startIconDrawable="@drawable/icon_user"
                 app:hintTextColor="@color/biruMENU"
@@ -133,7 +72,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tf_passMasuk"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:hint="Kata Sandi"
                 app:startIconDrawable="@drawable/icon_password"
                 app:hintTextColor="@color/biruMENU"
@@ -159,7 +98,7 @@
             <TextView
                 android:id="@+id/tv_lupaSandi"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:text="Lupa Kata Sandi?"
                 android:textColor="@color/biruMENU"
                 android:layout_marginTop="14sp"
@@ -170,7 +109,7 @@
             <Button
                 android:id="@+id/btn_Masuk"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:text="Masuk"
                 android:backgroundTint="@color/biruMENU"
                 android:fontFamily="@font/plusjakarta"
@@ -182,7 +121,7 @@
             <TextView
                 android:id="@+id/tv_blmPunyaAkun"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:text="Belum Punya Akun?"
                 android:textSize="10sp"
                 android:fontFamily="@font/plusjakarta"
@@ -193,7 +132,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:text="DAFTAR"
                 android:fontFamily="@font/plusjakarta"
                 app:layout_constraintTop_toBottomOf="@+id/tv_blmPunyaAkun"

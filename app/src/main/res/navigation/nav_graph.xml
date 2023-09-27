@@ -9,11 +9,7 @@
         android:id="@+id/layananfaskes"
         android:name="com.example.kayuringinsehat.LayananFragment"
         android:label="fragment_layanan"
-        tools:layout="@layout/fragment_layanan" >
-        <action
-            android:id="@+id/action_layananfaskes_to_aturakun"
-            app:destination="@id/aturakun" />
-    </fragment>
+        tools:layout="@layout/fragment_layanan" />
     <fragment
         android:id="@+id/listfaskes"
         android:name="com.example.kayuringinsehat.ListFaskesFragment"
@@ -36,9 +32,5 @@
         android:id="@+id/aturakun"
         android:name="com.example.kayuringinsehat.AturAkunFragment"
         android:label="fragment_atur_akun"
-        tools:layout="@layout/fragment_atur_akun" >
-        <action
-            android:id="@+id/action_aturakun_to_layananfaskes"
-            app:destination="@id/layananfaskes" />
-    </fragment>
+        tools:layout="@layout/fragment_atur_akun" />
 </navigation>

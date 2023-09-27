@@ -25,20 +25,28 @@ class FaskesTersedia : AppCompatActivity() {
         onCreateView()
         addDataKeList()
 
-        binding.cvKembaliFaskesTersedia.setOnTouchListener { view, motionEvent ->
-            when (motionEvent.action) {
-                MotionEvent.ACTION_DOWN -> {
-                    // Menampilkan efek sentuhan saat ditekan
-                    binding.cvKembaliFaskesTersedia.animate().scaleX(0.9f).scaleY(0.9f).start()
-                }
-                MotionEvent.ACTION_UP -> {
-                    // Mengembalikan ukuran cardview ke semula
-                    binding.cvKembaliFaskesTersedia.animate().scaleX(1f).scaleY(1f).start()
-                    startActivity(Intent(this, MainActivity::class.java))
-                }
-            }
-            true
+        binding.cvKembaliFaskesTersedia.setOnClickListener {
+            val fragment = ListFaskesFragment
+            val fragmentTransaction = supportFragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.faskesTersediaxml, fragment)
+            fragmentTransaction.addToBackStack(null)
+            fragmentTransaction.commit()
         }
+
+//        binding.cvKembaliFaskesTersedia.setOnTouchListener { view, motionEvent ->
+//            when (motionEvent.action) {
+//                MotionEvent.ACTION_DOWN -> {
+//                    // Menampilkan efek sentuhan saat ditekan
+//                    binding.cvKembaliFaskesTersedia.animate().scaleX(0.9f).scaleY(0.9f).start()
+//                }
+//                MotionEvent.ACTION_UP -> {
+//                    // Mengembalikan ukuran cardview ke semula
+//                    binding.cvKembaliFaskesTersedia.animate().scaleX(1f).scaleY(1f).start()
+//                    startActivity(Intent(this, MainActivity::class.java))
+//                }
+//            }
+//            true
+//        }
     }
 
     private fun onCreateView(){
