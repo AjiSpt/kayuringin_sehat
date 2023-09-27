@@ -71,7 +71,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cv_kembaliMens"
-                        android:layout_width="55dp"
+                        android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_marginStart="12dp"
                         android:backgroundTint="@color/merahMENS"
