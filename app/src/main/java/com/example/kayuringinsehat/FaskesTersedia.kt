@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
+import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kayuringinsehat.adaptorRV.faskesTersediaAdapter
@@ -25,13 +27,30 @@ class FaskesTersedia : AppCompatActivity() {
         onCreateView()
         addDataKeList()
 
+//        binding.cvKembaliFaskesTersedia.setOnClickListener {
+//            val intent=Intent(this Frag, MainActivity::class.java)
+//            startActivity(intent)
+//        }
+
+//        if (savedInstanceState == null) {
+//            supportFragmentManager.beginTransaction()
+//                .add(R.id.faskesTersediaxml, FaskesTersedia())
+//                .commit()
+//        }
+//
         binding.cvKembaliFaskesTersedia.setOnClickListener {
-            val fragment = ListFaskesFragment
-            val fragmentTransaction = supportFragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.faskesTersediaxml, fragment)
-            fragmentTransaction.addToBackStack(null)
-            fragmentTransaction.commit()
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.listfaskes, ListFaskesFragment())
+                .commit()
         }
+
+//        binding.cvKembaliFaskesTersedia.setOnClickListener {
+//            val fragment = ListFaskesFragment
+//            val fragmentTransaction = supportFragmentManager.beginTransaction()
+//            fragmentTransaction.replace(R.id.faskesTersediaxml, fragment)
+//            fragmentTransaction.addToBackStack(null)
+//            fragmentTransaction.commit()
+//        }
 
 //        binding.cvKembaliFaskesTersedia.setOnTouchListener { view, motionEvent ->
 //            when (motionEvent.action) {

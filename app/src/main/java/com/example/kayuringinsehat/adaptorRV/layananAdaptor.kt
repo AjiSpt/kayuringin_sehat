@@ -21,11 +21,12 @@ class layananAdaptor(private val layananList: List<dataLayanan>) :
     }
 
     override fun onBindViewHolder(holder: LayananViewHolder, position: Int) {
-        val layanan = layananList[position]
+        val actualPosition = position % layananList.size
+        val layanan = layananList[actualPosition]
         holder.gambarLayanan.setImageResource(layanan.gambar)
     }
 
     override fun getItemCount(): Int {
-        return layananList.size
+        return Int.MAX_VALUE
     }
 }
