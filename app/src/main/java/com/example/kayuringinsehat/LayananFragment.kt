@@ -24,8 +24,6 @@ class LayananFragment : Fragment() {
     private lateinit var layananList:ArrayList<dataLayanan>
     private lateinit var makananAdaptor: layananAdaptor
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
