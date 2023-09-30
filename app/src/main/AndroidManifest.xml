@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -15,13 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kayuringinsehat"
         tools:targetApi="31">
-        <activity
-            android:name=".FaskesTersedia3"
-            android:exported="false" />
-        <activity
-            android:name=".FaskesTersedia2"
-            android:exported="false">
-        </activity>
         <activity
             android:name=".Pesan"
             android:exported="false" />
@@ -54,13 +46,21 @@
             android:exported="false" />
         <activity
             android:name=".FaskesTersedia"
-            android:exported="false" />
+            android:exported="false">
+        </activity>
         <activity
             android:name=".GiziActivity"
-            android:exported="false" />
+            android:exported="false">
+        </activity>
         <activity
             android:name=".MensActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Register"
             android:exported="false" />
@@ -69,15 +69,11 @@
             android:exported="false" />
         <activity
             android:name=".BmiActivity"
-            android:exported="false" />
+            android:exported="false">
+        </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false">
         </activity>
     </application>
 

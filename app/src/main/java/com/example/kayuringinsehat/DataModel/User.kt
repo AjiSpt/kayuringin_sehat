@@ -1,6 +1,5 @@
 package com.example.kayuringinsehat.DataModel
 
-import java.sql.Blob
 
 data class User(
     val nik: Int,

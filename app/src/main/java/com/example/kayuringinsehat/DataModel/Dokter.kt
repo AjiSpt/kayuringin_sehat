@@ -5,6 +5,5 @@ data class Dokter(
     val namaDokter : String,
     val fotoDokter : String,
     val faskes: Faskes,
-    val poli: Poli,
-    val jadwal: Jadwal
+    val poli: Poli
 )
