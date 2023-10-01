@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/faskesTersediaxml"
-    tools:context=".FaskesTersedia">
+    tools:context=".FaskesTersediaActivity">
 
     <LinearLayout
         android:id="@+id/lin_1_faskesTersedia"

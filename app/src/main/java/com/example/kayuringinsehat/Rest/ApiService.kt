@@ -1,19 +1,43 @@
 package com.example.kayuringinsehat.Rest
 
-import com.example.kayuringinsehat.DataModel.User
-import okhttp3.Call
-import retrofit2.http.GET
+
+import com.example.kayuringinsehat.dataModel.ResponseLogin
+import retrofit2.Call
+import retrofit2.http.Field
+import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
-import retrofit2.http.Path
 
 interface ApiService {
-
-    //Buat interface Retrofit utk mendefinisikan metode2 API
-
-    //Method utk menambahkan data dari API
-    @POST("phpapi/phpapi_1.php?function=daftar_user")
-    fun DaftarUser(): Call<daftar_user>
+    @FormUrlEncoded
+    @POST("kayuringin_backend/autentik_akun.php?function=login_user")
+    fun login(@Field("nik") nik: String, @Field("kata_sandi") kata_sandi: String): Call<ResponseLogin>
 }
+
+
+
+
+
+//import okhttp3.Call
+//interface ApiService {
+//
+//    fun register(
+//        nik: Int,
+//        nama: String,
+//        telepon: Int,
+//        noBpjs: Int,
+//        kataSandi: String
+//    ): Call
+//}
+
+
+
+
+
+//Buat interface Retrofit utk mendefinisikan metode2 API
+    //Method utk menambahkan data dari API
+//    @POST("phpapi/phpapi_1.php?function=daftar_user")
+//    fun DaftarUser(): Call<daftar_user>
+//}
 
 //        // Contoh metode untuk menambahkan data baru ke API
 //        @POST("user")

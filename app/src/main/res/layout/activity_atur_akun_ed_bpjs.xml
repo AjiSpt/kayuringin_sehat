@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AturAkun_EdBPJS">
+    tools:context=".AturAkun_EdBPJSActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_kembali"

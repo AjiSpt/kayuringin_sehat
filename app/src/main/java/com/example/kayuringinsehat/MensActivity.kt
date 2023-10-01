@@ -62,6 +62,7 @@ class MensActivity : AppCompatActivity() {
                     // Menampilkan efek sentuhan saat ditekan
                     binding.cvKembaliMens.animate().scaleX(0.9f).scaleY(0.9f).start()
                 }
+
                 MotionEvent.ACTION_UP -> {
                     // Mengembalikan ukuran cardview ke semula
                     binding.cvKembaliMens.animate().scaleX(1f).scaleY(1f).start()
@@ -124,7 +125,11 @@ class MensActivity : AppCompatActivity() {
         val dateFormat = SimpleDateFormat("dd/MM/yyyy")
 
         binding.masaSubur.text =
-            "Perkiraan Masa Subur:\n${dateFormat.format(perkiraanMasaSuburAwal)}  s/d  ${dateFormat.format(perkiraanMasaSuburAkhir)}"
+            "Perkiraan Masa Subur:\n${dateFormat.format(perkiraanMasaSuburAwal)}  s/d  ${
+                dateFormat.format(
+                    perkiraanMasaSuburAkhir
+                )
+            }"
         binding.masaOvulasi.text = "Perkiraan Ovulasi:\n${dateFormat.format(perkiraanOvulasi)}"
         binding.masaSiklus.text =
             "Perkiraan Menstruasi Berikutnya:\n${dateFormat.format(perkiraanMenstruasiBerikutnya)}"

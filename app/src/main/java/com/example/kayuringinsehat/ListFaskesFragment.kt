@@ -27,17 +27,17 @@ class ListFaskesFragment : Fragment() {
         _binding = FragmentListFaskesBinding.bind(view)
 
         binding.cvRumahsakit.setOnClickListener {
-            val intent = Intent(activity, FaskesTersedia::class.java)
+            val intent = Intent(activity, FaskesTersediaActivity::class.java)
             startActivity(intent)
         }
 
         binding.cvPuskesmas.setOnClickListener {
-            val intent = Intent(activity, FaskesTersedia2::class.java)
+            val intent = Intent(activity, FaskesTersedia2Activity::class.java)
             startActivity(intent)
         }
 
         binding.cvKlinik.setOnClickListener {
-            val intent = Intent(activity, FaskesTersedia3::class.java)
+            val intent = Intent(activity, FaskesTersedia3Activity::class.java)
             startActivity(intent)
         }
     }

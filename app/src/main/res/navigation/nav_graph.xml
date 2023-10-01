@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/tanyafaskes"
-        android:name="com.example.kayuringinsehat.Tanya"
+        android:name="com.example.kayuringinsehat.TanyaActivity"
         android:label="fragment_tanya"
         tools:layout="@layout/fragment_tanya" >
         <action

@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 
     <application
         android:allowBackup="true"
@@ -15,37 +17,37 @@
         android:theme="@style/Theme.Kayuringinsehat"
         tools:targetApi="31">
         <activity
-            android:name=".Pesan"
+            android:name=".PesanActivity"
             android:exported="false" />
         <activity
-            android:name=".AturAkun_TentangApp"
+            android:name=".AturAkun_TentangAppActivity"
             android:exported="false" />
         <activity
-            android:name=".AturAkun_EdGoldar"
+            android:name=".AturAkun_EdGoldarAcitivity"
             android:exported="false" />
         <activity
-            android:name=".AturAkun_EdJK"
+            android:name=".AturAkun_EdJKActivity"
             android:exported="false" />
         <activity
-            android:name=".AturAkun_EdEMail"
+            android:name=".AturAkun_EdEMailActivity"
             android:exported="false" />
         <activity
-            android:name=".AturAkun_EdBPJS"
+            android:name=".AturAkun_EdBPJSActivity"
             android:exported="false" />
         <activity
-            android:name=".AturAkun_EdNam"
+            android:name=".AturAkun_EdNamActivity"
             android:exported="false" />
         <activity
-            android:name=".NomorAntrian"
+            android:name=".NomorAntrianActivity"
             android:exported="false" />
         <activity
-            android:name=".PoliTersedia"
+            android:name=".PoliTersediaActivity"
             android:exported="false" />
         <activity
-            android:name=".DaftarPoli"
+            android:name=".DaftarPoliActivity"
             android:exported="false" />
         <activity
-            android:name=".FaskesTersedia"
+            android:name=".FaskesTersediaActivity"
             android:exported="false">
         </activity>
         <activity
@@ -54,19 +56,22 @@
         </activity>
         <activity
             android:name=".MensActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity
-            android:name=".Register"
-            android:exported="false" />
-        <activity
-            android:name=".Login"
-            android:exported="false" />
         <activity
             android:name=".BmiActivity"
             android:exported="false">
