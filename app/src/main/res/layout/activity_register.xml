@@ -72,7 +72,7 @@
                 app:startIconDrawable="@drawable/icon_user">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tf_daftarNik"
+                    android:id="@+id/input_daftarNik"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -89,7 +89,7 @@
                 app:startIconDrawable="@drawable/icon_user">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tf_daftarNama"
+                    android:id="@+id/input_daftarNama"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -107,7 +107,7 @@
                 app:startIconDrawable="@drawable/icon_telphone">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tf_daftarTelepon"
+                    android:id="@+id/input_daftarTelepon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -124,7 +124,7 @@
                 app:startIconDrawable="@drawable/icon_nopbpjs">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tf_daftarNoBPJS"
+                    android:id="@+id/input_daftarNoBPJS"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -141,7 +141,7 @@
                 app:startIconDrawable="@drawable/icon_password">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tf_daftarKataSandi"
+                    android:id="@+id/input_daftarKataSandi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />
@@ -159,7 +159,7 @@
                 app:startIconDrawable="@drawable/icon_password">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/tf_daftarKataSandi2"
+                    android:id="@+id/input_daftarKataSandi2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword" />

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.example.kayuringinsehat.Rest.ApiClient
+import com.example.kayuringinsehat.dataModel.ResponseLogin
 //import com.example.kayuringinsehat.dataModel.ResponseLogin
 import com.example.kayuringinsehat.databinding.ActivityLoginBinding
 import retrofit2.Call
@@ -67,7 +68,7 @@ class LoginActivity : AppCompatActivity() {
         val nik = binding.inputNik.text.toString()
         val kataSandi = binding.inputKatasandi.text.toString()
         val api = ApiClient().getInstance()
-        api.login(nik, kataSandi).enqueue(/* callback = */ object : Callback<ResponseLogin> {
+        api.login(nik, kataSandi).enqueue(object : Callback<ResponseLogin> {
             override fun onResponse(call: Call<ResponseLogin>, response: Response<ResponseLogin>) {
                 if (response.isSuccessful) {
                     if (response.body()?.response == true) {

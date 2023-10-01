@@ -2,6 +2,7 @@ package com.example.kayuringinsehat.Rest
 
 
 import com.example.kayuringinsehat.dataModel.ResponseLogin
+import com.example.kayuringinsehat.dataModel.ResponseRegister
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -10,7 +11,19 @@ import retrofit2.http.POST
 interface ApiService {
     @FormUrlEncoded
     @POST("kayuringin_backend/autentik_akun.php?function=login_user")
-    fun login(@Field("nik") nik: String, @Field("kata_sandi") kata_sandi: String): Call<ResponseLogin>
+    fun login(
+        @Field("nik") nik: String,
+        @Field("kata_sandi") kata_sandi: String
+    ): Call<ResponseLogin>
+
+    @POST("kayuringin_backend/autentik_akun.php?function=register_user")
+    fun register(
+        @Field("nik") nik: Int,
+        @Field("nama") nama: String,
+        @Field("telepon") telepon: Int,
+        @Field("no_bpjs") no_bpjs: Int,
+        @Field("kata_sandi") kata_sandi: String
+    ): Call<ResponseRegister>
 }
 
 
