@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.navigation.Navigation.findNavController
 import com.example.kayuringinsehat.Rest.ApiClient
 import com.example.kayuringinsehat.dataModel.ResponseLogin
 //import com.example.kayuringinsehat.dataModel.ResponseLogin
@@ -62,6 +63,18 @@ class LoginActivity : AppCompatActivity() {
         binding.tombolDaftar.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
                 }
+
+        binding.exit.setOnClickListener {
+
+            startActivity(Intent(this, MainActivity::class.java))
+//            val fragment = LayananFragment()
+//
+//            val transaction = supportFragmentManager.beginTransaction()
+//            transaction.replace(R.id.fragmentContainerView, fragment)
+//            transaction.addToBackStack(null)
+//            transaction.commit()
+        }
+
         }
 
     private fun getData(){
