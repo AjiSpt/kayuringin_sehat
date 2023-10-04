@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "559945878031",
+    "project_id": "kayuringinsehat-db",
+    "storage_bucket": "kayuringinsehat-db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559945878031:android:d502a9a7a93804e5b8317a",
+        "android_client_info": {
+          "package_name": "com.example.kayuringinsehat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvXRv-fjkc7hzQcnQ0ZeFmNC0f9S1_hnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
