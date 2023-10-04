@@ -15,7 +15,7 @@
     <string name="masuk_user">Telepon/Email/NIK/No.BPJS</string>
     <string name="kata_sandi">Kata Sandi</string>
     <string name="ulang_kata_sandi">Ulangi Kata Sandi</string>
-    <string name="nik">NIK / Nomor KTP</string>
+    <string name="nik">NIK</string>
     <string name="telepon">Telepon/Email</string>
     <string name="bpjs">No.BPJS</string>
 

@@ -1,15 +1,28 @@
 package com.example.kayuringinsehat
 
+import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextUtils
 import android.util.Log
+import android.util.Patterns
+import android.view.WindowManager
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.Navigation.findNavController
 import com.example.kayuringinsehat.Rest.ApiClient
 import com.example.kayuringinsehat.dataModel.ResponseLogin
 //import com.example.kayuringinsehat.dataModel.ResponseLogin
 import com.example.kayuringinsehat.databinding.ActivityLoginBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -17,86 +30,92 @@ import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityLoginBinding
-    //private var nik = binding.inputNik.text.toString().toInt()
-    //private var kataSandi = binding.inputKatasandi.text.toString()
+    private lateinit var binding: ActivityLoginBinding
+    private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var mProgressDialog: Dialog
+    private var etEmail: EditText? = null
+    private var etPassword: EditText? = null
+    private var bLogin: Button? = null
+    private var isAllDetailsChecked = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        firebaseAuth= FirebaseAuth.getInstance()
+        supportActionBar?.hide()
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
 
-         //TODO: UNTUK CEK KONEKSI INTERNET ANDROID ANDA WAHAI USER!!!!
-//        val connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-//        val networkInfo = connectivityManager.activeNetworkInfo
-//
-//        if (networkInfo != null && networkInfo.isConnected) {
-//        } else {
-//            // Tidak ada koneksi internet
-//            Toast.makeText(this, "Tidak Ada Koneksi Internet", Toast.LENGTH_LONG).show()
-//        }
+        etEmail = binding.inputNik
+        etPassword = binding.inputKatasandi
+        bLogin = binding.btnMasuk
 
-        // TODO: ketika pencet tombol MASUK
-        binding.btnMasuk.setOnClickListener {
-            val nik = binding.inputNik.text.toString()
-            val kataSandi = binding.inputKatasandi.text.toString()
-
-            var valid = true
-
-            if(nik.isEmpty()){
-                binding.inputNik.error = "NIK Belum Diisi"
-                valid = false
-            }
-            if(kataSandi.isEmpty()){
-                binding.inputKatasandi.error = "Kata Sandi Belum Diisi"
-                valid = false
-            }
-            if(valid){
-                Toast.makeText(this, "Login Berhasil", Toast.LENGTH_SHORT).show()
-                getData()
-            }else{
-                Toast.makeText(this, "Isi Bidang Yang Kosong", Toast.LENGTH_SHORT).show()
-            }
+        binding.tvDaftar.setOnClickListener {
+            val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+            startActivity(intent)
         }
 
-        // TODO: ketika pencet tombol DAFTAR
-        binding.tombolDaftar.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity::class.java))
-                }
+        bLogin!!.setOnClickListener {
 
-        binding.exit.setOnClickListener {
-
-            startActivity(Intent(this, MainActivity::class.java))
-//            val fragment = LayananFragment()
-//
-//            val transaction = supportFragmentManager.beginTransaction()
-//            transaction.replace(R.id.fragmentContainerView, fragment)
-//            transaction.addToBackStack(null)
-//            transaction.commit()
-        }
-
-        }
-
-    private fun getData(){
-        val nik = binding.inputNik.text.toString()
-        val kataSandi = binding.inputKatasandi.text.toString()
-        val api = ApiClient().getInstance()
-        api.login(nik, kataSandi).enqueue(object : Callback<ResponseLogin> {
-            override fun onResponse(call: Call<ResponseLogin>, response: Response<ResponseLogin>) {
-                if (response.isSuccessful) {
-                    if (response.body()?.response == true) {
-                        startActivity(Intent(this@LoginActivity, MainActivity::class.java))
-                        finish()
-                    } else {
-                        Toast.makeText(this@LoginActivity, "Login Gagal", Toast.LENGTH_LONG).show()
+            if (validateLoginDetails()) {
+                val email = etEmail!!.text.toString().trim()
+                val password = etPassword!!.text.toString().trim()
+                firebaseAuth.signInWithEmailAndPassword(email, password)
+                    .addOnSuccessListener {
+                            val intent= Intent(this@LoginActivity, MainActivity::class.java)
+                            startActivity(intent)
                     }
-                } else {
-                    Toast.makeText(this@LoginActivity, "Login Gagal", Toast.LENGTH_LONG).show()
-                }
+                    .addOnFailureListener {
+                        hideProgressDialog()
+                        Toast.makeText(
+                            this,
+                            "Login Failed due to ${it.message}",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
             }
-            override fun onFailure(call: Call<ResponseLogin>, t: Throwable) {
-                Log.e("Pesan error","${t.message}" )
-            }
-        })
+        }
+    }
+
+    private fun hideProgressDialog() {
+        mProgressDialog.dismiss()
+    }
+
+    private fun validateLoginDetails(): Boolean {
+        isAllDetailsChecked = checkAllDetails()
+
+        return if (isAllDetailsChecked) {
+            true
+        } else {
+            Toast.makeText(this, "Login Gagal", Toast.LENGTH_LONG).show()
+            false
+        }
+    }
+
+    private fun isEmail(text: Editable?): Boolean {
+        val email: CharSequence = text.toString()
+        return !TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches()
+    }
+
+    private fun checkAllDetails(): Boolean {
+        if (etEmail?.length() == 0) {
+            etEmail?.error = "Email tidak boleh kosong"
+            return false
+        }
+        if (!isEmail(etEmail?.editableText)) {
+            etEmail?.error = "Alamat email tidak valid"
+            return false
+        }
+        if (etPassword!!.length() == 0) {
+            etPassword!!.error = "Kata sandi tidak boleh kosong"
+            return false
+        } else if (etPassword!!.length() < 8) {
+            etPassword!!.error = "Kata sandi minimal 8 karakter"
+            return false
+        }
+        return true
     }
 }

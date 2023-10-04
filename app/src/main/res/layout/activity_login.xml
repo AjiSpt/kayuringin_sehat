@@ -51,7 +51,7 @@
                 android:id="@+id/tf_idMasuk"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:hint="NIK"
+                android:hint="Email"
                 app:boxStrokeColor="@color/biruMENU"
                 app:endIconMode="clear_text"
                 app:hintTextColor="@color/biruMENU"
@@ -63,8 +63,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/input_nik"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="number" />
+                    android:layout_height="wrap_content"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -130,7 +129,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/btn_Masuk" />
 
             <TextView
-                android:id="@+id/tv_masuk"
+                android:id="@+id/tv_daftar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/daftar"

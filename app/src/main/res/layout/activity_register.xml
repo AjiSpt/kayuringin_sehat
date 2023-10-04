@@ -65,14 +65,14 @@
                         android:id="@+id/tf_InputLayoutNikNoKtp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Nama Depan"
+                        android:hint="@string/nik"
                         app:boxStrokeColor="@color/biruMENU"
                         app:endIconMode="clear_text"
                         app:hintTextColor="@color/biruMENU"
                         app:startIconDrawable="@drawable/icon_user">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/input_daftarNik"
+                            android:id="@+id/inputDaftarNik"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
@@ -82,14 +82,14 @@
                         android:id="@+id/tf_nama"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Nama Belakang"
+                        android:hint="Nama"
                         app:boxStrokeColor="@color/biruMENU"
                         app:endIconMode="clear_text"
                         app:hintTextColor="@color/biruMENU"
                         app:startIconDrawable="@drawable/icon_user">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/input_daftarNama"
+                            android:id="@+id/inputDaftarNama"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
@@ -107,7 +107,24 @@
                         app:startIconDrawable="@drawable/icon_telphone">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/input_daftarTelepon"
+                            android:id="@+id/inputDaftarTelepon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tf_bpjs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/bpjs"
+                        app:boxStrokeColor="@color/biruMENU"
+                        app:endIconMode="clear_text"
+                        app:hintTextColor="@color/biruMENU"
+                        app:startIconDrawable="@drawable/icon_telphone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/inputDaftarNoBPJS"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
@@ -124,7 +141,7 @@
                         app:startIconDrawable="@drawable/icon_password">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/input_daftarKataSandi"
+                            android:id="@+id/inputDaftarKataSandi"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="textPassword" />
@@ -142,7 +159,7 @@
                         app:startIconDrawable="@drawable/icon_password">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/input_daftarKataSandi2"
+                            android:id="@+id/inputDaftarKataSandi2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="textPassword" />
@@ -150,7 +167,7 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <Button
-                        android:id="@+id/btn_daftar_register"
+                        android:id="@+id/btnDaftarRegister"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="13sp"
@@ -175,14 +192,14 @@
                         app:layout_constraintTop_toBottomOf="@+id/btn_Masuk" />
 
                     <TextView
-                        android:id="@+id/tv_register"
+                        android:id="@+id/tv_masuk"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/masuk"
+                        android:layout_height="15dp"
                         android:layout_gravity="center"
                         android:fontFamily="@font/plusjakarta"
+                        android:text="@string/masuk"
                         android:textColor="@color/biruMENU"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
