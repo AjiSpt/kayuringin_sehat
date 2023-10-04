@@ -90,7 +90,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
-                    android:maxLength="20"/>
+                    android:maxLength="20" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,36 +129,21 @@
                 app:layout_constraintStart_toStartOf="@+id/btn_Masuk"
                 app:layout_constraintTop_toBottomOf="@+id/btn_Masuk" />
 
-            <Button
-                android:id="@+id/tombol_daftar"
+            <TextView
+                android:id="@+id/tv_masuk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/daftar"
+                android:layout_gravity="center"
                 android:fontFamily="@font/plusjakarta"
-                android:text="Daftar"
-                android:textColor="@color/white"
-                android:textSize="10sp"
+                android:textColor="@color/biruMENU"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/tv_blmPunyaAkun"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_blmPunyaAkun" />
+                app:layout_constraintStart_toStartOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
-
-    <Button
-        android:id="@+id/exit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/plusjakarta"
-        android:text="menu"
-        android:backgroundTint="@color/merahGOLDAR"
-        android:textColor="@color/white"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/copyright"/>
-
-
 
     <TextView
         android:id="@+id/copyright"

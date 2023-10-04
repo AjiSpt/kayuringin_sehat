@@ -19,207 +19,173 @@
         android:id="@+id/scrollview_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/Header"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
 
-    <TextView
-        android:id="@+id/tv_Daftar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/plusjakarta"
-        android:shadowColor="@color/text_shadow"
-        android:text="Daftar"
-        android:textColor="@color/biruMENU"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv_daftar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="35dp"
-        app:cardBackgroundColor="@color/abuCARDVIEW"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_Daftar">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="17dp">
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tf_InputLayoutNikNoKtp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="NIK"
-                app:boxStrokeColor="@color/biruMENU"
-                app:endIconMode="clear_text"
-                app:hintTextColor="@color/biruMENU"
-                app:startIconDrawable="@drawable/icon_user">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input_daftarNik"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tf_nama"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Nama"
-                app:boxStrokeColor="@color/biruMENU"
-                app:endIconMode="clear_text"
-                app:hintTextColor="@color/biruMENU"
-                app:startIconDrawable="@drawable/icon_user">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input_daftarNama"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tf_InputLayoutTelpEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Telephone"
-                app:boxStrokeColor="@color/biruMENU"
-                app:endIconMode="clear_text"
-                app:hintTextColor="@color/biruMENU"
-                app:startIconDrawable="@drawable/icon_telphone">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input_daftarTelepon"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tf_inputNoBPJS"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Nomor BPJS"
-                app:boxStrokeColor="@color/biruMENU"
-                app:endIconMode="clear_text"
-                app:hintTextColor="@color/biruMENU"
-                app:startIconDrawable="@drawable/icon_nopbpjs">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input_daftarNoBPJS"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tf_InputLayoutKataSandi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Kata Sandi"
-                app:boxStrokeColor="@color/biruMENU"
-                app:hintTextColor="@color/biruMENU"
-                app:passwordToggleEnabled="true"
-                app:startIconDrawable="@drawable/icon_password">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input_daftarKataSandi"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tf_InputLayoutKataSandi2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Ulangi Kata Sandi"
-                app:boxStrokeColor="@color/biruMENU"
-                app:hintTextColor="@color/biruMENU"
-                app:passwordToggleEnabled="true"
-                app:startIconDrawable="@drawable/icon_password">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input_daftarKataSandi2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <Button
-                android:id="@+id/btn_daftar_register"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13sp"
-                android:backgroundTint="@color/biruMENU"
-                android:fontFamily="@font/plusjakarta"
-                android:text="DAFTAR"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tf_InputLayoutKataSandi2" />
-
             <TextView
-                android:id="@+id/tv_blmPunyaAkun"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="11sp"
-                android:fontFamily="@font/plusjakarta"
-                android:gravity="center"
-                android:text="Sudah Punya Akun?"
-                android:textSize="10sp"
-                app:layout_constraintEnd_toEndOf="@+id/btn_Masuk"
-                app:layout_constraintStart_toStartOf="@+id/btn_Masuk"
-                app:layout_constraintTop_toBottomOf="@+id/btn_Masuk" />
-
-            <Button
-                android:id="@+id/btn_masuk_register"
+                android:id="@+id/tv_Daftar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/plusjakarta"
-                android:layout_gravity="center"
-                android:text="MASUK"
-                android:textColor="@color/white"
-                android:textSize="8sp"
+                android:shadowColor="@color/text_shadow"
+                android:text="Daftar"
+                android:textColor="@color/biruMENU"
+                android:textSize="25dp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_blmPunyaAkun" />
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_daftar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="35dp"
+                app:cardBackgroundColor="@color/abuCARDVIEW"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_Daftar">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="29dp"
-        android:fontFamily="@font/plusjakarta"
-        android:text="©Kayuringin Sehat"
-        android:textColor="@color/abuCOPYRIGHT"
-        app:layout_constraintTop_toBottomOf="@+id/cv_daftar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="17dp">
 
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tf_InputLayoutNikNoKtp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nama Depan"
+                        app:boxStrokeColor="@color/biruMENU"
+                        app:endIconMode="clear_text"
+                        app:hintTextColor="@color/biruMENU"
+                        app:startIconDrawable="@drawable/icon_user">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_daftarNik"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tf_nama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nama Belakang"
+                        app:boxStrokeColor="@color/biruMENU"
+                        app:endIconMode="clear_text"
+                        app:hintTextColor="@color/biruMENU"
+                        app:startIconDrawable="@drawable/icon_user">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_daftarNama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tf_InputLayoutTelpEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        app:boxStrokeColor="@color/biruMENU"
+                        app:endIconMode="clear_text"
+                        app:hintTextColor="@color/biruMENU"
+                        app:startIconDrawable="@drawable/icon_telphone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_daftarTelepon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tf_InputLayoutKataSandi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Kata Sandi"
+                        app:boxStrokeColor="@color/biruMENU"
+                        app:hintTextColor="@color/biruMENU"
+                        app:passwordToggleEnabled="true"
+                        app:startIconDrawable="@drawable/icon_password">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_daftarKataSandi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tf_InputLayoutKataSandi2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Ulangi Kata Sandi"
+                        app:boxStrokeColor="@color/biruMENU"
+                        app:hintTextColor="@color/biruMENU"
+                        app:passwordToggleEnabled="true"
+                        app:startIconDrawable="@drawable/icon_password">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/input_daftarKataSandi2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btn_daftar_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13sp"
+                        android:backgroundTint="@color/biruMENU"
+                        android:fontFamily="@font/plusjakarta"
+                        android:text="DAFTAR"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tf_InputLayoutKataSandi2" />
+
+                    <TextView
+                        android:id="@+id/tv_blmPunyaAkun"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11sp"
+                        android:fontFamily="@font/plusjakarta"
+                        android:gravity="center"
+                        android:text="Sudah Punya Akun?"
+                        android:textSize="10sp"
+                        app:layout_constraintEnd_toEndOf="@+id/btn_Masuk"
+                        app:layout_constraintStart_toStartOf="@+id/btn_Masuk"
+                        app:layout_constraintTop_toBottomOf="@+id/btn_Masuk" />
+
+                    <TextView
+                        android:id="@+id/tv_register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/masuk"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/plusjakarta"
+                        android:textColor="@color/biruMENU"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
